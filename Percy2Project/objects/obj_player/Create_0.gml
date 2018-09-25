@@ -2,7 +2,8 @@ enum PERCY {
 	STAND,
 	WALK,
 	RUN,
-	TURN
+	TURN,
+	JUMP
 }
 
 ACTION = PERCY.STAND;
