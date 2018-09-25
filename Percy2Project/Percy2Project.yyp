@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0d1e1e9e-2dec-4d5a-9037-4777e46cec76",
+            "Value": {
+                "id": "63d5b3fa-224d-4123-a11b-cff0fe29af1a",
+                "resourcePath": "sprites\\spr_percy_slide\\spr_percy_slide.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13308880-01a8-4095-9cfb-7c57da4d01d3",
             "Value": {
                 "id": "dfaea1c8-87de-43b1-89f9-90e737346353",
