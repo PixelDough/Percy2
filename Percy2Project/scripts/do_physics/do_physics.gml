@@ -12,24 +12,26 @@ var _grav = argument4;
 
 //check if on ground
 if( place_free( x, y+1 )){
-    gravity = _grav; //set gravity - we are in the air!
-	if ( !_do_jump ) {
-		if vspeed < 0 {
-			vspeed *= 0.9;
-		}
-	}
+    velocity[1] += _grav; //set gravity - we are in the air!
+	//if ( !_do_jump ) {
+	//	if velocity[1] < 0 {
+	//		velocity[1] *= 0.9;
+	//	}
+	//}
 } else {
-    gravity = 0; //no need for gravity on ground
+    velocity[1] = 0; //no need for gravity on ground
 
     //we are on ground so we can check if we need to jump
-    if( _do_jump and vspeed >= 0 ){
-        vspeed = -sqrt(2 * _grav * _jump_speed);
+    if( _do_jump and velocity[1] >= 0 ){
+        velocity[1] = -sqrt(2 * _grav * _jump_speed);
 	}
 }
 
 //set horizontal movement based on controls
-if( _dir == 0 ) {
-    hspeed = 0
-} else {
-    hspeed = _speed * _dir;
+velocity[0] = _speed;
+if place_meeting(x+sign(velocity[0]), y, obj_solid) {
+	velocity[0] = 0;
 }
+
+x+=velocity[0];
+y+=velocity[1];

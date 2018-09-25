@@ -11,5 +11,6 @@ spd = 0.05;
 
 image_speed = 0;
 
-vel_x = 0;
-vel_y = 0;
+velocity = [0, 0];
+
+jh = 64
