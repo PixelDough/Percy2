@@ -2,17 +2,19 @@ var _x_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 
 var _grounded = place_meeting(x, y+1, obj_solid);
 
-velocity[0] = clamp(velocity[0] + _x_input*0.05, -2, 2);
+velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 
 var _no_input = _x_input == 0;
-var _turn = _x_input == -sign(velocity[0]) && !_no_input && _grounded;
-if _no_input || _turn {
-	velocity[0] = lerp(velocity[0], 0, 0.1);
-	if _no_input {
-		change_action(PERCY.STAND, true);
-	}
-	if _turn {
-		change_action(PERCY.TURN, true);
+var _turn = _x_input == -sign(velocity[0]) && !_no_input;
+if (_no_input || _turn) {
+	velocity[0] = lerp(velocity[0], 0, 0.15);
+	if _grounded {
+		if _no_input {
+			change_action(PERCY.STAND, true);
+		}
+		if _turn {
+			change_action(PERCY.TURN, true);
+		}
 	}
 } else {
 	if ACTION != PERCY.WALK {
@@ -35,4 +37,4 @@ image_speed = abs(velocity[0]);
 
 event_user(ACTION);
 
-do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.1);
+do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
