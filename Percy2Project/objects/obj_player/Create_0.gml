@@ -16,3 +16,5 @@ image_speed = 0;
 velocity = [0, 0];
 
 jh = 64
+
+grounded = true;

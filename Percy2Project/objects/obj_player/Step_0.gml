@@ -1,6 +1,6 @@
 var _x_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 
-var _grounded = place_meeting(x, y+1, obj_solid);
+grounded = place_meeting(x, y+1, obj_solid);
 
 velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 
@@ -8,7 +8,7 @@ var _no_input = _x_input == 0;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
 if (_no_input || _turn) {
 	velocity[0] = lerp(velocity[0], 0, 0.15);
-	if _grounded {
+	if grounded {
 		if _no_input {
 			change_action(PERCY.STAND, true);
 		}
@@ -29,7 +29,7 @@ if _x_input != 0 {
 	image_xscale = sign(_x_input);
 }
 
-if !_grounded change_action(PERCY.JUMP, true);
+if !grounded change_action(PERCY.JUMP, true);
 
 //x+=velocity[0];
 image_speed = abs(velocity[0]);
