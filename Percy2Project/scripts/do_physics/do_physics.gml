@@ -12,8 +12,20 @@ var _dir = argument3;
 var _speed = argument4;
 var _grav = argument5;
 
+//if abs(velocity[0]) > 0 {
+//	if place_meeting(x, y+velocity[1], obj_solid) {
+//		//var _hit = instance_place(x, y+velocity[1], obj_solid)
+//		while !place_meeting(x, y+sign(velocity[1]), obj_solid) {
+//			y+=sign(velocity[1]);
+//		}
+//		//if velocity[1] < 0 and bbox_top >= _hit.bbox_bottom
+//		//	_hit.hit = true;
+//		//velocity[1] = 0;
+//	}
+//}
+
 //check if on ground
-if( place_free( x, y+1 )){
+if( !place_meeting( x, y+1, obj_solid )){
     //set gravity - we are in the air!
 	if velocity[1] > 0 {
 		_grav*=2;
@@ -26,7 +38,7 @@ if( place_free( x, y+1 )){
 	}
 } else {
     velocity[1] = 0; //no need for gravity on ground
-
+	
     //we are on ground so we can check if we need to jump
     if( _do_jump and velocity[1] >= 0 ){
         velocity[1] = -sqrt(2 * _grav * _jump_speed);
@@ -34,11 +46,15 @@ if( place_free( x, y+1 )){
 	}
 }
 
+//y+=velocity[1];
+
 //set horizontal movement based on controls
 velocity[0] = _speed;
-if place_meeting(x+sign(velocity[0]), y, obj_solid) {
+if place_meeting(x+(velocity[0]), y, obj_solid) {
+	while !place_meeting(x+sign(velocity[0]), y, obj_solid) {
+		x+=sign(velocity[0]);
+	}
 	velocity[0] = 0;
 }
 
-x+=velocity[0];
-y+=velocity[1];
+//x+=velocity[0];

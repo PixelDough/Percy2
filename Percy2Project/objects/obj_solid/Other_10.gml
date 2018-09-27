@@ -1,0 +1,1 @@
+/// @description BLOCK HIT EVENT

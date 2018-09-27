@@ -5,13 +5,13 @@
     "name": "obj_StarBlock",
     "eventList": [
         {
-            "id": "fcad7272-50fd-401a-a8dc-d84d2898f70d",
+            "id": "80ca08bc-225d-4a8a-b258-54c98134e056",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "2c3e1cbe-e596-4cc5-a254-ad08902d72a1",
-            "enumb": 0,
-            "eventtype": 4,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 10,
+            "eventtype": 7,
             "m_owner": "c9c9b3ad-c34a-4990-8abc-77f8ee64e178"
         }
     ],

@@ -38,3 +38,4 @@ image_speed = abs(velocity[0]);
 event_user(ACTION);
 
 do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
+collide();

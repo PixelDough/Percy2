@@ -5,13 +5,23 @@
     "name": "obj_IceBlock",
     "eventList": [
         {
-            "id": "65fb61a6-a72c-4e33-95e6-319e655e1d2b",
+            "id": "5f31a0ad-6900-4fc9-ac86-81639d573dda",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "2c3e1cbe-e596-4cc5-a254-ad08902d72a1",
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "9a43aff1-8f0d-44ea-8350-30487b87273d"
+        },
+        {
+            "id": "94267d03-ba01-469b-82ab-72e89559646b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 4,
+            "eventtype": 8,
             "m_owner": "9a43aff1-8f0d-44ea-8350-30487b87273d"
         }
     ],
