@@ -4,7 +4,7 @@ grounded = place_meeting(x, y+1, obj_solid);
 
 velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 
-var _no_input = _x_input == 0;
+var _no_input = _x_input == 0 and grounded;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
 if (_no_input || _turn) {
 	velocity[0] = lerp(velocity[0], 0, 0.15);
