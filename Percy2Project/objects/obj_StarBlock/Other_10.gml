@@ -3,4 +3,5 @@
 event_inherited();
 
 sprite_index = spr_block;
-//other.velocity[1] = 0;
+velocity[1] = -1
+obj_player.velocity[1] = 0;
