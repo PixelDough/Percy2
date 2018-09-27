@@ -1,10 +1,10 @@
 ACTION = 0;
 event_user(ACTION);
 
-keyboard_set_map(ord("W"),vk_up);
-keyboard_set_map(ord("A"),vk_left);
-keyboard_set_map(ord("S"),vk_down);
-keyboard_set_map(ord("D"),vk_right);
+keyboard_set_map(vk_up,ord("W"));
+keyboard_set_map(vk_left,ord("A"),);
+keyboard_set_map(vk_down,ord("S"),);
+keyboard_set_map(vk_right,ord("D"),);
 
 keyboard_set_map(ord("Z"),ord("N"));
 keyboard_set_map(ord("X"),ord("M"));

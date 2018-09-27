@@ -3,7 +3,8 @@ enum PERCY {
 	WALK,
 	RUN,
 	TURN,
-	JUMP
+	JUMP,
+	CROUCH
 }
 
 ACTION = PERCY.STAND;
@@ -18,3 +19,5 @@ velocity = [0, 0];
 jh = 64
 
 grounded = true;
+
+current_room = instance_place(x, y, obj_room);
