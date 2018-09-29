@@ -17,13 +17,15 @@ velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 var _no_input = _x_input == 0 and grounded;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
 if (_no_input || _turn) {
-	velocity[0] = lerp(velocity[0], 0, 0.15);
-	if grounded and !_crouch {
-		if _no_input {
-			change_action(PERCY.STAND, true);
-		}
-		if _turn {
-			change_action(PERCY.TURN, true);
+	if (_crouch and abs(velocity[0]) < 3) or (!_crouch) {
+		velocity[0] = lerp(velocity[0], 0, 0.15);
+		if grounded and !_crouch {
+			if _no_input {
+				change_action(PERCY.STAND, true);
+			}
+			if _turn {
+				change_action(PERCY.TURN, true);
+			}
 		}
 	}
 } else {
@@ -32,14 +34,14 @@ if (_no_input || _turn) {
 	}
 }
 
+if !grounded and !_crouch change_action(PERCY.JUMP, true);
+
 //if velocity[0] != 0 {
 //	image_xscale = sign(velocity[0]);
 //}
 if _x_input != 0 {
 	image_xscale = sign(_x_input);
 }
-
-if !grounded change_action(PERCY.JUMP, true);
 
 //x+=velocity[0];
 image_speed = abs(velocity[0]);
