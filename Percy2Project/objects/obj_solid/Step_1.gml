@@ -27,3 +27,26 @@ if block_hit() {
 	}
 	if _hit event_user(0);
 }
+
+x += velocity[0];
+y += velocity[1];
+
+
+if (instance_place(x, y-2, obj_player)){
+	if ceil(obj_player.bbox_bottom) <= ceil(bbox_top) {
+		obj_player.y = ceil(bbox_top);
+		//obj_player.x += velocity[0]
+		with obj_player {
+			collide([other.velocity[0],0]);
+		}
+	}
+	move_pushed_horizontal(obj_player)
+	//if obj_player.bbox_right > bbox_left and obj_player.bbox_right < bbox_right {
+	//	obj_player.x = bbox_left-(obj_player.bbox_right - obj_player.bbox_left)
+	//} else if obj_player.bbox_left < bbox_right and obj_player.bbox_left > bbox_left {
+	//	obj_player.x = bbox_right+(obj_player.bbox_right - obj_player.bbox_left)
+	//} else {
+		
+	//}
+}
+

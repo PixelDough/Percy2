@@ -24,6 +24,12 @@ var _grav = argument5;
 //	}
 //}
 
+var _x_diff = x-xprevious;
+var _y_diff = y-yprevious;
+while (position_meeting(bbox_left, y, obj_solid) and position_meeting(bbox_right, y, obj_solid)) and (position_meeting(x, bbox_top, obj_solid) and position_meeting(x, bbox_bottom, obj_solid)) {
+	y--;
+}
+
 //check if on ground
 if( !place_meeting( x, y+1, obj_solid )){
     //set gravity - we are in the air!
