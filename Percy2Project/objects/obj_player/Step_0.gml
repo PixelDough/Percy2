@@ -1,7 +1,7 @@
 current_room = instance_place(x, y, obj_room);
 
 var _x_input = input.r - input.l;
-var _crouch = input.d;
+var _crouch = input.d or (ACTION == PERCY.CROUCH and place_meeting(x, y-8, obj_solid));
 
 grounded = place_meeting(x, y+1, obj_solid);
 
@@ -17,15 +17,13 @@ velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 var _no_input = _x_input == 0 and grounded;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
 if (_no_input || _turn) {
-	if (_crouch and abs(velocity[0]) < 3) or (!_crouch) {
-		velocity[0] = lerp(velocity[0], 0, 0.15);
-		if grounded and !_crouch {
-			if _no_input {
-				change_action(PERCY.STAND, true);
-			}
-			if _turn {
-				change_action(PERCY.TURN, true);
-			}
+	velocity[0] = lerp(velocity[0], 0, 0.15 / (_crouch * 2 + 1));
+	if grounded and !_crouch {
+		if _no_input {
+			change_action(PERCY.STAND, true);
+		}
+		if _turn {
+			change_action(PERCY.TURN, true);
 		}
 	}
 } else {
@@ -48,6 +46,9 @@ image_speed = abs(velocity[0]);
 
 event_user(ACTION);
 
+var _final_velocity = [velocity[0] + velocity_carry[0], velocity[1] + velocity_carry[1]];
 
 do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
-collide();
+velocity = collide(velocity);
+
+

@@ -15,6 +15,7 @@ spd_mul = 1;
 image_speed = 0;
 
 velocity = [0, 0];
+velocity_carry = [0, 0]
 
 jh = 64
 
