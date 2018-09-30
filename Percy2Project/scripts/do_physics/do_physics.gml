@@ -48,7 +48,7 @@ if( !place_meeting( x, y+1, obj_solid )){
     //we are on ground so we can check if we need to jump
     if( _do_jump and velocity[1] >= 0 ){
         velocity[1] = -sqrt(2 * _grav * _jump_speed);
-		audio_play_sound(snd_jump, 100, false);
+		//audio_play_sound(snd_jump, 100, false);
 	}
 }
 

@@ -7,7 +7,13 @@ enum PERCY {
 	CROUCH
 }
 
+enum POWERS {
+	NONE,
+	ICE
+}
+
 ACTION = PERCY.STAND;
+POWER = POWERS.NONE;
 
 spd = 0.05;
 spd_mul = 1;

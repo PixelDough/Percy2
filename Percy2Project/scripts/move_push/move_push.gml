@@ -29,7 +29,8 @@ while (place_meeting(x, y, _pushable))// and (sign(y-_pushable.y) == sign(_pusha
 	with _pushable {
 		var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
 		if _hit and _hit != other {
-			room_restart();
+			instance_destroy();
+			exit;
 		}
 	}
 	_pushable.x += sign(x-xprevious);

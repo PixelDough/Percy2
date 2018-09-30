@@ -1,4 +1,4 @@
-if block_hit() {
+if block_hit() and instance_exists(obj_player) {
 	var _hit = true;
 	var _dist = point_distance(obj_player.x, obj_player.bbox_top, x+sprite_width/2, y+sprite_height/2);
 	with all {

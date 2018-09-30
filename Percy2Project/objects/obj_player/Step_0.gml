@@ -42,7 +42,7 @@ if _x_input != 0 {
 }
 
 //x+=velocity[0];
-image_speed = abs(velocity[0]);
+image_speed = abs(velocity[0]/(4));
 
 event_user(ACTION);
 
