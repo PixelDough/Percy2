@@ -9,15 +9,33 @@ var _pushable = argument0;
 //Creating the list to store the colliding objects
 var pushable_list = ds_list_create();
 
+//with _pushable {
+//	var _tl = collision_point(bbox_left, bbox_top, obj_solid, false, true);
+//	var _tr = collision_point(bbox_right, bbox_top, obj_solid, false, true);
+//	var _bl = collision_point(bbox_left, bbox_bottom, obj_solid, false, true);
+//	var _br = collision_point(bbox_right, bbox_bottom, obj_solid, false, true);
+//	while _tl and _tr and _bl and _br {
+//		x -= other.x-other.xprevious
+//		y -= other.y-other.yprevious
+//	}
+//}
+
 //Collision loop
-while (place_meeting(x+sign(x-xprevious), y, _pushable)) //Collision with an additional pixel in the moving direction
+while (place_meeting(x, y, _pushable))// and (sign(y-_pushable.y) == sign(_pushable.velocity[1])) //Collision with an additional pixel in the moving direction
 {
-	_pushable.x += sign(x-xprevious)
+	//_pushable.x += x-xprevious;
+	//_pushable.y += y-yprevious;
+	
 	with _pushable {
-		while (position_meeting(bbox_left, y, obj_solid) and position_meeting(bbox_right, y, obj_solid)) and (position_meeting(x, bbox_top, obj_solid) and position_meeting(x, bbox_bottom, obj_solid)) {
-			y--;
+		var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
+		if _hit and _hit != other {
+			room_restart();
 		}
 	}
+	_pushable.x += sign(x-xprevious);
+	_pushable.y += sign(y-yprevious);
+	
+	
 	////Getting the ID of an object colliding
 	//var pushable;
 	//pushable = collision_rectangle(x+(velocity[0]), y, x+(velocity[0])+sprite_width, y+sprite_height, _pushable, false, true)
@@ -36,14 +54,3 @@ while (place_meeting(x+sign(x-xprevious), y, _pushable)) //Collision with an add
 	//ds_list_add(pushable_list, pushable);
 	//instance_deactivate_object(pushable);
 }
-
-//If the list is not empty, reactivate the objects stored inside, and then delete them from the list.
-while (!ds_list_empty(pushable_list))
-{
-   to_activate = ds_list_find_value(pushable_list, 0)
-   instance_activate_object(to_activate);
-   ds_list_delete(pushable_list, 0);    
-}
-
-//Destroy the list
-ds_list_destroy(pushable_list);

@@ -40,7 +40,7 @@ if (instance_place(x, y-2, obj_player)){
 			collide([other.velocity[0],0]);
 		}
 	}
-	move_pushed_horizontal(obj_player)
+	move_push(obj_player)
 	//if obj_player.bbox_right > bbox_left and obj_player.bbox_right < bbox_right {
 	//	obj_player.x = bbox_left-(obj_player.bbox_right - obj_player.bbox_left)
 	//} else if obj_player.bbox_left < bbox_right and obj_player.bbox_left > bbox_left {
