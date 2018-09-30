@@ -7,21 +7,6 @@ if block_hit() {
 				_hit = false
 			}
 		
-			//if (floor(x/16)*16 == floor(obj_player.x/16)*16) and (floor(y/16)*16 == floor((obj_player.y-obj_player.sprite_yoffset)/16)*16) {
-			//	instance_destroy();
-			//	audio_play_sound(snd_blockBreak, 100, false);
-			//	obj_player.velocity[1] = 0;
-			//	for (var _i=0; _i<=3; _i++) { 
-			//		var _part = instance_create_layer(bbox_left + (bbox_right-bbox_left)/2, bbox_top + (bbox_bottom-bbox_top)/2, "META", obj_part_iceCrumble);
-			//		_part.direction = (90 * _i) + 45;
-			//	}
-			
-			//} else {
-			//	show_debug_message("X: " + string(floor(x/16)*16) + " - " + string(floor(obj_player.x/16)*16));
-			//	show_debug_message("Y: " + string(floor(y/16)*16) + " - " + string(floor((obj_player.y-obj_player.sprite_yoffset)/16)*16));
-			
-			//}
-		
 		}
 	
 	}
@@ -31,22 +16,20 @@ if block_hit() {
 x += velocity[0];
 y += velocity[1];
 
-
-if (instance_place(x, y-2, obj_player)){
-	if ceil(obj_player.bbox_bottom) <= ceil(bbox_top) {
-		obj_player.y = ceil(bbox_top);
-		//obj_player.x += velocity[0]
-		with obj_player {
-			collide([other.velocity[0],0]);
+var _riders = ds_list_create();
+instance_place_list(x, y-2, physics_object, _riders, true);
+for (var _i=0; _i<ds_list_size(_riders); _i++) {
+	if instance_exists(_riders[|_i]) {
+		if (object_is_ancestor(_riders[|_i].object_index, physics_object)){
+			//Keep the player on the ground they're standing on
+			if ceil(_riders[|_i].bbox_bottom) <= ceil(bbox_top) {
+				_riders[|_i].y = ceil(bbox_top);
+				with _riders[|_i] {
+					collide([other.velocity[0],0]);
+				}
+			}
+			move_push(_riders[|_i])
 		}
 	}
-	move_push(obj_player)
-	//if obj_player.bbox_right > bbox_left and obj_player.bbox_right < bbox_right {
-	//	obj_player.x = bbox_left-(obj_player.bbox_right - obj_player.bbox_left)
-	//} else if obj_player.bbox_left < bbox_right and obj_player.bbox_left > bbox_left {
-	//	obj_player.x = bbox_right+(obj_player.bbox_right - obj_player.bbox_left)
-	//} else {
-		
-	//}
 }
-
+ds_list_destroy(_riders)

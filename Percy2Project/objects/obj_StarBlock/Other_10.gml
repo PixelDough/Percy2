@@ -5,6 +5,8 @@ event_inherited();
 if sprite_index != spr_block {
 	velocity[1] = -1
 	confetti(x+sprite_width/2, bbox_top, 10);
+	var _mint = instance_create_depth(x+(sprite_width/2), bbox_top-4, depth-1, obj_mint)
+	_mint.velocity[1] = -2;
 }
 obj_player.velocity[1] = 0;
 

@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "8c9312bd-46c7-4333-9376-f2c359a3e57e",
+            "Value": {
+                "id": "2fcc433e-820b-4fee-bfee-4c9598e57def",
+                "resourcePath": "objects\\physics_object\\physics_object.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8d3848fc-9f77-4a2c-b66e-a1b59b7f80ad",
             "Value": {
                 "id": "87afb1c9-c7f1-41b3-97aa-365f552bfec9",
@@ -655,11 +663,35 @@
             }
         },
         {
+            "Key": "da5c38e9-80e9-448e-9d87-ffb0dba478fc",
+            "Value": {
+                "id": "688cecd3-54f0-47f3-a1de-c414baa5cebd",
+                "resourcePath": "views\\da5c38e9-80e9-448e-9d87-ffb0dba478fc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "db8f6d25-28be-4767-b941-2cca4dd83d09",
             "Value": {
                 "id": "14590099-c7ea-4d1f-a8f7-b20a01d9b0e7",
                 "resourcePath": "views\/db8f6d25-28be-4767-b941-2cca4dd83d09.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dfa6cb98-1889-4166-a8de-f24afefaf88d",
+            "Value": {
+                "id": "90b7d3af-d931-4500-8284-e57480cd89fe",
+                "resourcePath": "sprites\\spr_mint\\spr_mint.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e02f044b-db50-44cd-9dad-82d91de8640d",
+            "Value": {
+                "id": "a2753210-0a46-4716-97d9-ea0fd2be25a3",
+                "resourcePath": "objects\\obj_mint\\obj_mint.yy",
+                "resourceType": "GMObject"
             }
         },
         {
