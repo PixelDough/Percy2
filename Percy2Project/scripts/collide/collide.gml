@@ -27,13 +27,12 @@ y += _new_vel_y;
 //Snap
 var wall = instance_place(x,y+sign(_new_vel_y),obj_solid);
 if instance_exists(wall) {
-	if (wall.jump_through and wall.bbox_top > bbox_bottom) or (!wall.jump_through) {
-		if place_meeting(x,y+sign(_new_vel_y),obj_solid) {
-	
+	if wall {
+		if ((object_is_ancestor(wall.object_index, obj_platform) or wall.object_index == obj_platform) and _velocity[1] >= 0) or (!object_is_ancestor(wall.object_index, obj_platform)) {
 			if _new_vel_y > 0 { //right
-			    y = (wall.bbox_top-1)-sprite_bbox_bottom;
+				y = (wall.bbox_top-1)-sprite_bbox_bottom;
 			} else if _velocity[1] < 0 { //left
-			    y = (wall.bbox_bottom+1)-sprite_bbox_top;
+				y = (wall.bbox_bottom+1)-sprite_bbox_top;
 			}
 			_velocity[1] = 0;
 		}

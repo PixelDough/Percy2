@@ -9,7 +9,8 @@ enum PERCY {
 
 enum POWERS {
 	NONE,
-	ICE
+	ICE,
+	STRONG
 }
 
 ACTION = PERCY.STAND;

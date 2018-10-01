@@ -16,7 +16,7 @@ velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 
 var _no_input = _x_input == 0 and grounded;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
-if (_no_input || _turn) {
+if (_no_input || _turn) and !(_crouch and abs(velocity[0]) >= 3) {
 	velocity[0] = lerp(velocity[0], 0, 0.15 / (_crouch * 2 + 1));
 	if grounded and !_crouch {
 		if _no_input {
@@ -50,5 +50,3 @@ var _final_velocity = [velocity[0] + velocity_carry[0], velocity[1] + velocity_c
 
 do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
 velocity = collide(velocity);
-
-
