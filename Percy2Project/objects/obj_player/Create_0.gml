@@ -24,7 +24,10 @@ image_speed = 0;
 velocity = [0, 0];
 velocity_carry = [0, 0]
 
-jh = 64
+jh = 64;
+
+holding_present = false;
+present = noone;
 
 grounded = true;
 

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0751b79b-8d69-4a6b-a875-2ecde5e51eea",
+            "Value": {
+                "id": "89b0a99f-d3e1-461c-8ad9-f076417715c3",
+                "resourcePath": "scripts\\percy_present\\percy_present.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "08734bf0-240e-4bfa-bcd6-abc1e8443466",
             "Value": {
                 "id": "475561a6-e63c-4087-9419-5a97f0e84592",
@@ -84,6 +92,14 @@
                 "id": "dfaea1c8-87de-43b1-89f9-90e737346353",
                 "resourcePath": "views\/13308880-01a8-4095-9cfb-7c57da4d01d3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "13deba3d-4204-41b2-9275-6d935eb9ba74",
+            "Value": {
+                "id": "95367f43-9412-444d-ad4e-6fa585d6055a",
+                "resourcePath": "scripts\\make_dead\\make_dead.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -324,6 +340,14 @@
                 "id": "e06e1442-cfd0-4ca1-bf2c-f049d96a170c",
                 "resourcePath": "sounds\/snd_coin\/snd_coin.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5154387f-85d7-4544-bd8a-41150ea23234",
+            "Value": {
+                "id": "f25cdc2f-dd28-46a6-8227-1ea0bc6aa6c0",
+                "resourcePath": "objects\\obj_dead\\obj_dead.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -943,6 +967,14 @@
             }
         },
         {
+            "Key": "e447f3ba-d9b7-483e-b5a6-7aaa0edbe767",
+            "Value": {
+                "id": "204a0346-b977-4cf0-9f5f-f043032e98e5",
+                "resourcePath": "sprites\\spr_present\\spr_present.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e479d770-7a26-4967-bfed-62e9347c100d",
             "Value": {
                 "id": "388554bc-7ada-4ab0-a9a2-ace905986536",
@@ -956,6 +988,14 @@
                 "id": "75ba5633-3140-4a6d-879a-93e536c9de2d",
                 "resourcePath": "scripts\\pal_swap_set_depth\\pal_swap_set_depth.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e8d7b7a4-db28-4a92-b575-0c0eac206d75",
+            "Value": {
+                "id": "ccdb7daa-09a3-4caf-82ae-4bebd8b0c2f4",
+                "resourcePath": "objects\\obj_present\\obj_present.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1064,7 +1104,9 @@
         "c15fc399-347e-4d5f-9f88-8df7e90026e1",
         "64e3cf07-69e0-489c-9c1e-005ac8e2189c",
         "edf5948a-d789-41d9-ad72-7fd1b077b567",
-        "fad978d1-1e20-4864-a426-d7ba2a034084"
+        "fad978d1-1e20-4864-a426-d7ba2a034084",
+        "0751b79b-8d69-4a6b-a875-2ecde5e51eea",
+        "13deba3d-4204-41b2-9275-6d935eb9ba74"
     ],
     "tutorial": ""
 }

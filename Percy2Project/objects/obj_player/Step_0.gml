@@ -34,6 +34,7 @@ if (_no_input || _turn) and !(_crouch and abs(velocity[0]) >= 3) {
 
 if !grounded and !_crouch change_action(PERCY.JUMP, true);
 
+
 //if velocity[0] != 0 {
 //	image_xscale = sign(velocity[0]);
 //}
@@ -48,5 +49,15 @@ event_user(ACTION);
 
 var _final_velocity = [velocity[0] + velocity_carry[0], velocity[1] + velocity_carry[1]];
 
-do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
-velocity = collide(velocity);
+var _do_physics = true;
+if present {
+	if present.is_held and present.y > bbox_top+4 {
+		_do_physics = false;
+	}
+}
+if _do_physics {
+	do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
+	velocity = collide(velocity);
+}
+
+percy_present();
