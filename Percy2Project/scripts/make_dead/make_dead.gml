@@ -8,4 +8,4 @@ _dead.sprite_index = _target_sprite;
 _dead.image_index = _target_image_index;
 _dead.image_speed = 0;
 
-instance_destroy(_target)
+instance_deactivate_object(_target)

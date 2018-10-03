@@ -17,7 +17,7 @@ x += velocity[0];
 y += velocity[1];
 
 var _riders = ds_list_create();
-instance_place_list(x, y-1, physics_object, _riders, true);
+instance_place_list(x, y-2, physics_object, _riders, true);
 for (var _i=0; _i<ds_list_size(_riders); _i++) {
 	if instance_exists(_riders[|_i]) {
 		if (object_is_ancestor(_riders[|_i].object_index, physics_object)){
