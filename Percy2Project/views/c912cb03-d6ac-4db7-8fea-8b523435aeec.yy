@@ -6,7 +6,8 @@
     "children": [
         "5d42ad2c-0561-4589-9e65-4490c5cb0c90",
         "58d8fef1-5804-4ae4-8a9e-efcd896a7b6f",
-        "acc45824-fadd-472c-8e7f-dac1bab3b855"
+        "acc45824-fadd-472c-8e7f-dac1bab3b855",
+        "137e8ee2-85ed-420f-83d5-26146d1551f6"
     ],
     "filterType": "GMSprite",
     "folderName": "META",

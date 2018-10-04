@@ -26,12 +26,17 @@ var _grav = argument5;
 
 var _x_diff = x-xprevious;
 var _y_diff = y-yprevious;
-while (position_meeting(bbox_left, y, obj_solid) and position_meeting(bbox_right, y, obj_solid)) and (position_meeting(x, bbox_top, obj_solid) and position_meeting(x, bbox_bottom, obj_solid)) {
-	y--;
-}
+//while (position_meeting(bbox_left, y, obj_solid) and position_meeting(bbox_right, y, obj_solid)) and (position_meeting(x, bbox_top, obj_solid) and position_meeting(x, bbox_bottom, obj_solid)) {
+//	y--;
+//}
 
 //check if on ground
-if( !place_meeting( x, y+1, obj_solid )){
+var _y_hit = instance_place( x, y+1, obj_solid )
+var _y_hit_solid = false;
+if _y_hit {
+	if _y_hit.solid_ _y_hit_solid = true;
+}
+if(!_y_hit) or (_y_hit and !_y_hit_solid) {
     //set gravity - we are in the air!
 	if velocity[1] > 0 {
 		_grav*=2;
@@ -56,11 +61,14 @@ if( !place_meeting( x, y+1, obj_solid )){
 
 //set horizontal movement based on controls
 velocity[0] = _speed;
-if place_meeting(x+(velocity[0]), y, obj_solid) {
-	while !place_meeting(x+sign(velocity[0]), y, obj_solid) {
-		x+=sign(velocity[0]);
+var _x_hit = instance_place(x+(velocity[0]), y, obj_solid);
+if _x_hit {
+	if _x_hit.solid_ {
+		while !place_meeting(x+sign(velocity[0]), y, obj_solid) {
+			x+=sign(velocity[0]);
+		}
+		velocity[0] = 0;
 	}
-	velocity[0] = 0;
 }
 
 //x+=velocity[0];

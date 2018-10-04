@@ -8,8 +8,10 @@ if velocity[0] != 0 {
 	image_xscale = sign(velocity[0]);
 }
 
-if instance_place(x+sign(velocity[0]), y, obj_solid) velocity[0] *= -1;
 
+
+make_platform(obj_platform)
+//if instance_place(x+sign(velocity[0]), y, obj_solid) velocity[0] *= -1;
 do_physics(grounded, false, jh, dir, velocity[0], 0.05);
 velocity = collide(velocity);
 

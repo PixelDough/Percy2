@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "137e8ee2-85ed-420f-83d5-26146d1551f6",
+            "Value": {
+                "id": "c212c371-2ded-4923-becc-7552720bb199",
+                "resourcePath": "sprites\\spr_empty\\spr_empty.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13deba3d-4204-41b2-9275-6d935eb9ba74",
             "Value": {
                 "id": "95367f43-9412-444d-ad4e-6fa585d6055a",
@@ -503,6 +511,14 @@
             }
         },
         {
+            "Key": "7576ae8b-d64c-4aee-80b7-d1f8330d5796",
+            "Value": {
+                "id": "772cba33-dbb3-4dca-8e57-bc1249ec9c60",
+                "resourcePath": "rooms\\rm_overworld\\rm_overworld.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "816d9b2e-e9ed-465c-818d-ad8077cfbcd6",
             "Value": {
                 "id": "d0d2731e-c8b6-4d24-b707-35a2b3c7cfb1",
@@ -652,6 +668,14 @@
                 "id": "25472218-fb76-431e-ab92-f4ab43b8b411",
                 "resourcePath": "sprites\/spr_Sky_Snow\/spr_Sky_Snow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a0976ca0-d8d4-45d3-8c4d-93597228caaf",
+            "Value": {
+                "id": "c9a47c7a-ae3d-4d66-ad3e-6a6dc127ca0e",
+                "resourcePath": "scripts\\make_platform\\make_platform.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1106,7 +1130,8 @@
         "edf5948a-d789-41d9-ad72-7fd1b077b567",
         "fad978d1-1e20-4864-a426-d7ba2a034084",
         "0751b79b-8d69-4a6b-a875-2ecde5e51eea",
-        "13deba3d-4204-41b2-9275-6d935eb9ba74"
+        "13deba3d-4204-41b2-9275-6d935eb9ba74",
+        "a0976ca0-d8d4-45d3-8c4d-93597228caaf"
     ],
     "tutorial": ""
 }

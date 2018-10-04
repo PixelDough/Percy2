@@ -3,7 +3,9 @@ current_room = instance_place(x, y, obj_room);
 var _x_input = input.r - input.l;
 var _crouch = input.d or (ACTION == PERCY.CROUCH and place_meeting(x, y-8, obj_solid));
 
-grounded = place_meeting(x, y+1, obj_solid);
+var _ground = instance_place(x, y+1, obj_solid)
+grounded = _ground;
+if instance_exists(_ground) grounded = _ground.solid_
 
 if _crouch {
 	if grounded
@@ -56,7 +58,10 @@ if present {
 	}
 }
 if _do_physics {
-	do_physics(input.action_one_pressed, input.action_one_released, jh, _x_input, velocity[0], 0.15);
+	make_platform(obj_platform)
+	var _float = 1
+	if POWER == POWERS.FLOAT _float = 0.75
+	do_physics(input.action_one_pressed, input.action_one_released, jh/_float, _x_input, velocity[0], grav*_float);
 	velocity = collide(velocity);
 }
 

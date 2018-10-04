@@ -10,7 +10,8 @@ enum PERCY {
 enum POWERS {
 	NONE,
 	ICE,
-	STRONG
+	STRONG,
+	FLOAT
 }
 
 ACTION = PERCY.STAND;
@@ -30,5 +31,5 @@ holding_present = false;
 present = noone;
 
 grounded = true;
-
+grav = 0.15;
 current_room = instance_place(x, y, obj_room);

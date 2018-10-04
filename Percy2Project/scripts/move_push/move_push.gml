@@ -7,7 +7,7 @@
 var _pushable = argument0;
 
 //Creating the list to store the colliding objects
-var pushable_list = ds_list_create();
+
 
 //with _pushable {
 //	var _tl = collision_point(bbox_left, bbox_top, obj_solid, false, true);
@@ -21,37 +21,41 @@ var pushable_list = ds_list_create();
 //}
 
 //Collision loop
-while (place_meeting(x, y, _pushable))// and (sign(y-_pushable.y) == sign(_pushable.velocity[1])) //Collision with an additional pixel in the moving direction
-{
-	//_pushable.x += x-xprevious;
-	//_pushable.y += y-yprevious;
+if solid_ {
+	var pushable_list = ds_list_create();
 	
-	with _pushable {
-		var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
-		if _hit and _hit != other {
-			instance_deactivate_object(self);
-			exit;
+	while (place_meeting(x, y, _pushable))// and (sign(y-_pushable.y) == sign(_pushable.velocity[1])) //Collision with an additional pixel in the moving direction
+	{
+		//_pushable.x += x-xprevious;
+		//_pushable.y += y-yprevious;
+	
+		with _pushable {
+			var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
+			if _hit and _hit != other {
+				instance_deactivate_object(self);
+				exit;
+			}
 		}
-	}
-	_pushable.x += sign(x-xprevious);
-	_pushable.y += sign(y-yprevious);
+		_pushable.x += sign(x-xprevious);
+		_pushable.y += sign(y-yprevious);
 	
 	
-	////Getting the ID of an object colliding
-	//var pushable;
-	//pushable = collision_rectangle(x+(velocity[0]), y, x+(velocity[0])+sprite_width, y+sprite_height, _pushable, false, true)
-	//if (instance_exists(pushable))
-	//{
-	//   //pushable.x = x; //Allign the object to the moving block coordinates
-	//   while(place_meeting(x+(velocity[0]), y, pushable)) //Then push it away until it’s outside the block
-	//   {
-	//       pushable.x += sign(velocity[0])*1;
-	//   }
-	//}
+		////Getting the ID of an object colliding
+		//var pushable;
+		//pushable = collision_rectangle(x+(velocity[0]), y, x+(velocity[0])+sprite_width, y+sprite_height, _pushable, false, true)
+		//if (instance_exists(pushable))
+		//{
+		//   //pushable.x = x; //Allign the object to the moving block coordinates
+		//   while(place_meeting(x+(velocity[0]), y, pushable)) //Then push it away until it’s outside the block
+		//   {
+		//       pushable.x += sign(velocity[0])*1;
+		//   }
+		//}
    
 
-	////Adding the object to the list, then deactivating it to allow the loop to end
-	////If multiple objects, the loop keeps going until all of them stored in the list and deactivated
-	//ds_list_add(pushable_list, pushable);
-	//instance_deactivate_object(pushable);
+		////Adding the object to the list, then deactivating it to allow the loop to end
+		////If multiple objects, the loop keeps going until all of them stored in the list and deactivated
+		//ds_list_add(pushable_list, pushable);
+		//instance_deactivate_object(pushable);
+	}
 }
