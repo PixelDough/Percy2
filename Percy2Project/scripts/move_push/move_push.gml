@@ -32,12 +32,17 @@ if solid_ {
 		with _pushable {
 			var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
 			if _hit and _hit != other {
-				instance_deactivate_object(self);
+				//make_dead(self);
 				exit;
 			}
 		}
-		_pushable.x += sign(x-xprevious);
-		_pushable.y += sign(y-yprevious);
+		if x-xprevious == 0 and y-yprevious == 0 {
+			//_pushable.x += 1;
+			_pushable.y -= 1;
+		} else {
+			_pushable.x += sign(x-xprevious);
+			_pushable.y += sign(y-yprevious);
+		}
 	
 	
 		////Getting the ID of an object colliding

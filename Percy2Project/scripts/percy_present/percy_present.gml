@@ -1,4 +1,4 @@
-var _target = instance_place(x, y+4, obj_solid);
+var _target = instance_place(x, y+4, obj_enemy);
 if _target and input.d and input.action_two_pressed {
 	present = instance_create_layer(_target.x, _target.y, "META", obj_present);
 	present.sprite_index = _target.sprite_index

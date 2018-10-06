@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "1514b984-dae7-4ad5-9b2e-99d9c2014354",
+            "Value": {
+                "id": "0aa4b737-17ac-4f73-8809-427f051fb14c",
+                "resourcePath": "scripts\\do_physics1\\do_physics1.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "17b2974a-4b0c-4469-9123-85a52b89419a",
             "Value": {
                 "id": "85955ded-a825-4f6b-ae61-045ff7b91785",
@@ -147,6 +155,14 @@
             "Value": {
                 "id": "2b1e1d15-8435-4ba2-bd09-0e16ad53e0f2",
                 "resourcePath": "objects\\obj_part\\obj_part.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2371155b-0f69-41f7-b2a7-e485712041dc",
+            "Value": {
+                "id": "0bc5a9ff-c420-45f4-bda6-7e141bf94c2a",
+                "resourcePath": "objects\\obj_item\\obj_item.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -243,6 +259,14 @@
             "Value": {
                 "id": "05b10a43-5e5f-4097-aff9-41f21e3d6843",
                 "resourcePath": "objects\\obj_depth_swapper_end\\obj_depth_swapper_end.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "36f41143-d27f-4cf0-893d-e99057c7d0d7",
+            "Value": {
+                "id": "8f51c7b0-df32-46f0-a1d2-1881c6d611b6",
+                "resourcePath": "objects\\obj_player1\\obj_player1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -423,6 +447,14 @@
             }
         },
         {
+            "Key": "61af47d0-275f-4da9-9b82-1bc1d04b130a",
+            "Value": {
+                "id": "cc0560da-534b-4aaf-aab9-02f4378aeb8a",
+                "resourcePath": "objects\\obj_percy\\obj_percy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "64236aa0-0efb-440b-b93c-5ad7e0dfa7bb",
             "Value": {
                 "id": "a1501b4f-0f42-41bd-8440-e05caa20f3be",
@@ -436,6 +468,14 @@
                 "id": "91bdfa59-26f7-4f35-a1e7-00c861f1f5b6",
                 "resourcePath": "objects\\obj_depth_swapper_start\\obj_depth_swapper_start.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "64d59e40-f9cc-4306-ada1-f92dc3726b07",
+            "Value": {
+                "id": "bb7cc827-d299-4955-a6e1-8bee0a5157f8",
+                "resourcePath": "sprites\\spr_snowball\\spr_snowball.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -687,6 +727,14 @@
             }
         },
         {
+            "Key": "a44219a0-ad2d-491f-9638-eb4542c216fe",
+            "Value": {
+                "id": "b8f40a11-2447-4862-872d-0b38f1e6d0c1",
+                "resourcePath": "sprites\\spr_items50\\spr_items50.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a7ef80f4-eab1-4c6e-a703-d138a3b74b30",
             "Value": {
                 "id": "2fa0062b-c507-4dda-871e-56e28e69bdde",
@@ -935,6 +983,14 @@
             }
         },
         {
+            "Key": "d4b1fcc4-3158-4f53-a1e7-54815a8c4a96",
+            "Value": {
+                "id": "b7483d71-f183-4f1c-b1f8-abc6bddd1783",
+                "resourcePath": "sprites\\spr_percy_walk1\\spr_percy_walk1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d6225ca0-02be-4bd3-a85e-7342fbf4c7f2",
             "Value": {
                 "id": "0eace0a8-b06e-4158-bc5b-302b37de36fa",
@@ -964,6 +1020,14 @@
                 "id": "14590099-c7ea-4d1f-a8f7-b20a01d9b0e7",
                 "resourcePath": "views\/db8f6d25-28be-4767-b941-2cca4dd83d09.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dc04a9ce-2721-4f8b-8c04-4fb855197145",
+            "Value": {
+                "id": "7c84215d-11d2-42c7-a372-51cfbeb4623c",
+                "resourcePath": "scripts\\make_mover\\make_mover.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1131,7 +1195,9 @@
         "fad978d1-1e20-4864-a426-d7ba2a034084",
         "0751b79b-8d69-4a6b-a875-2ecde5e51eea",
         "13deba3d-4204-41b2-9275-6d935eb9ba74",
-        "a0976ca0-d8d4-45d3-8c4d-93597228caaf"
+        "a0976ca0-d8d4-45d3-8c4d-93597228caaf",
+        "dc04a9ce-2721-4f8b-8c04-4fb855197145",
+        "1514b984-dae7-4ad5-9b2e-99d9c2014354"
     ],
     "tutorial": ""
 }
