@@ -29,7 +29,8 @@ if solid_ {
 						collide([other.velocity[0],0]);
 					}
 				}
-				move_push(_riders[|_i])
+				if (velocity[0] != 0 or velocity[1] != 0)
+					move_push(_riders[|_i])
 			}
 		}
 	}

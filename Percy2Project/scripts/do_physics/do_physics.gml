@@ -31,12 +31,24 @@ var _y_diff = y-yprevious;
 //}
 
 //check if on ground
-var _y_hit = instance_place( x, y+1, obj_solid )
+var _y_hit = ds_list_create();
 var _y_hit_solid = false;
-if _y_hit {
-	if _y_hit.solid_ _y_hit_solid = true;
+instance_place_list(x, y+1, obj_solid, _y_hit, true);
+for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
+	if instance_exists(_y_hit[|_i]) {
+		if (object_is_ancestor(_y_hit[|_i].object_index, obj_solid) or _y_hit[|_i].object_index == obj_solid){
+			if _y_hit[|_i].solid_ _y_hit_solid = true;
+		}
+	}
 }
-if(!_y_hit) or (_y_hit and !_y_hit_solid) {
+ds_list_destroy(_y_hit)
+	
+//var _y_hit = instance_place( x, y+1, obj_solid )
+
+//if _y_hit {
+//	if _y_hit.solid_ _y_hit_solid = true;
+//}
+if(!_y_hit_solid) {
     //set gravity - we are in the air!
 	if velocity[1] > 0 {
 		_grav*=2;

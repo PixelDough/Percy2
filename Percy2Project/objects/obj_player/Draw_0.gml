@@ -1,8 +1,8 @@
-draw_shadow()
 
 var _pal = POWER;
 if POWER == 4 _pal=floor((global.time)/2 % POWER)
 pal_swap_set(spr_pal_percy, _pal, false);
+draw_shadow()
 draw_self();
 pal_swap_reset();
 

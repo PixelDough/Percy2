@@ -1,3 +1,5 @@
+make_platform(obj_platform)
+
 current_room = instance_place(x, y, obj_room);
 
 var _x_input = input.r - input.l;
@@ -58,7 +60,7 @@ if present {
 	}
 }
 if _do_physics {
-	make_platform(obj_platform)
+	
 	var _float = 1
 	if POWER == POWERS.FLOAT _float = 0.75
 	do_physics(input.action_one_pressed, input.action_one_released, jh/_float, _x_input, velocity[0], grav*_float);

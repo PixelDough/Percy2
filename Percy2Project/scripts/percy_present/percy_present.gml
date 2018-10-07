@@ -3,7 +3,6 @@ if _target and input.d and input.action_two_pressed {
 	present = instance_create_layer(_target.x, _target.y, "META", obj_present);
 	present.sprite_index = _target.sprite_index
 	present.image_index = _target.image_index
-	sprite_set_offset(present.image_index, (bbox_right - bbox_left)/2, bbox_bottom);
 	
 	instance_destroy(_target);
 	
