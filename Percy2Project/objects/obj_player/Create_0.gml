@@ -1,3 +1,4 @@
+event_inherited();
 enum PERCY {
 	STAND,
 	WALK,

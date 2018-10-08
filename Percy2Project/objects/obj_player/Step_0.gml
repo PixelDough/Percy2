@@ -5,12 +5,17 @@ current_room = instance_place(x, y, obj_room);
 var _x_input = input.r - input.l;
 var _crouch = input.d or (ACTION == PERCY.CROUCH and place_meeting(x, y-8, obj_solid));
 
-if place_meeting(x, y, obj_zone_water) {
+var _water_hit = instance_place(x, y, obj_zone_water)
+if _water_hit {
 	if !is_in_water {
 		is_in_water = true;
+		instance_create_depth(x, _water_hit.bbox_top, depth+1, obj_splash);
 	}
 } else {
-	is_in_water = false;
+	if is_in_water {
+		is_in_water = false;
+		//instance_create_depth(x, _water_hit.bbox_top, depth+1, obj_splash);
+	}
 }
 
 // Determine if on ground
@@ -88,7 +93,9 @@ if _do_physics {
 	make_platform(obj_platform)
 	var _float = 1
 	if POWER == POWERS.FLOAT _float = 0.75
-	do_physics(input.action_one_pressed && (jump_time > 0 || is_in_water), input.action_one_released, jh/_float, _x_input, velocity[0], grav*_float);
+	var _water_float = 1;
+	if is_in_water _water_float = 0.5;
+	do_physics(input.action_one_pressed && (jump_time > 0 || is_in_water), input.action_one_released, jh/_float, _x_input*_water_float, velocity[0], grav*_float*_water_float);
 	velocity = collide(velocity);
 }
 

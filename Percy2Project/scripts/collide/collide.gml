@@ -7,22 +7,44 @@ var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffs
 var sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprite_index);
 var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset(sprite_index);
 
+
 //Horizontal collisions
 var _new_vel_x = _velocity[0];
 //Snap
-if place_meeting(x+sign(_new_vel_x),y,obj_solid) {
-    var wall = instance_place(x+sign(_new_vel_x),y,obj_solid);
-	if wall.solid_ {
-	    if _new_vel_x > 0 { //right
-	        x = (wall.bbox_left-1)-sprite_bbox_right;
-	    } else if _velocity[0] < 0 { //left
-	        x = (wall.bbox_right+1)-sprite_bbox_left;
-	    }
+var _x_hit = ds_list_create();
+instance_place_list(x+sign(_new_vel_x), y, obj_solid, _x_hit, true);
+for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
+	if instance_exists(_x_hit[|_i]) {
+		if (object_is_ancestor(_x_hit[|_i].object_index, obj_solid) or _x_hit[|_i].object_index == obj_solid){
+			if _x_hit[|_i].solid_ {
+				if _new_vel_x > 0 { //right
+				    x = (_x_hit[|_i].bbox_left-1)-sprite_bbox_right;
+				} else if _velocity[0] < 0 { //left
+				    x = (_x_hit[|_i].bbox_right+1)-sprite_bbox_left;
+				}
 		
-	    _new_vel_x = 0;
+				_velocity[0] = 0;
+			}
+		}
 	}
 }
-x += _new_vel_x;
+ds_list_destroy(_x_hit)
+x += _velocity[0];
+//if place_meeting(x+sign(_new_vel_x),y,obj_solid) {
+//    var wall = instance_place(x+sign(_new_vel_x),y,obj_solid);
+//	if wall.solid_ {
+//	    if _new_vel_x > 0 { //right
+//	        x = (wall.bbox_left-1)-sprite_bbox_right;
+//	    } else if _velocity[0] < 0 { //left
+//	        x = (wall.bbox_right+1)-sprite_bbox_left;
+//	    }
+		
+//	    _new_vel_x = 0;
+//	}
+//}
+
+
+
 
 //Horizontal collisions
 var _new_vel_y = _velocity[1];
@@ -30,7 +52,7 @@ y += _new_vel_y;
 //Snap
 
 var _y_hit = ds_list_create();
-instance_place_list(x, y+1, obj_solid, _y_hit, true);
+instance_place_list(x, y+sign(_new_vel_y), obj_solid, _y_hit, true);
 for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 	if instance_exists(_y_hit[|_i]) {
 		if (object_is_ancestor(_y_hit[|_i].object_index, obj_solid) or _y_hit[|_i].object_index == obj_solid){
@@ -62,5 +84,11 @@ ds_list_destroy(_y_hit)
 //		}
 //	}
 //}
+
+
+
+
+
+
 
 return _velocity;
