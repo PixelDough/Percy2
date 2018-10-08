@@ -6,9 +6,10 @@ if solid_ {
 		var _hit = true;
 		var _dist = point_distance(obj_player.x, obj_player.bbox_top, x+sprite_width/2, y+sprite_height/2);
 		with all {
-			if object_is_ancestor(object_index, obj_solid) and object_index != obj_solid {
+			if object_is_ancestor(object_index, obj_solid) or object_index == obj_solid {
 				if _dist > point_distance(obj_player.x, obj_player.bbox_top, x+sprite_width/2, y+sprite_height/2) {
-					_hit = false
+					if obj_player.y > bbox_bottom
+						_hit = false
 				}
 		
 			}
@@ -28,7 +29,7 @@ if solid_ {
 						if _riders[|_i].velocity[1] >0 
 							_riders[|_i].y = ceil(bbox_top);
 						with _riders[|_i] {
-							collide([other.velocity[0],0]);
+							collide([other.velocity[0],other.velocity[1]]);
 						}
 					}
 					if _riders[|_i].velocity[1] >=0 {

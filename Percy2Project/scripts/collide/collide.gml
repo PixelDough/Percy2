@@ -1,5 +1,7 @@
 ///@param velocity
 
+make_platform(obj_platform)
+
 var _velocity = argument0;
 
 var sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
@@ -10,6 +12,7 @@ var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset
 
 //Horizontal collisions
 var _new_vel_x = _velocity[0];
+
 //Snap
 var _x_hit = ds_list_create();
 instance_place_list(x+sign(_new_vel_x), y, obj_solid, _x_hit, true);
@@ -19,7 +22,7 @@ for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
 			if _x_hit[|_i].solid_ {
 				if _new_vel_x > 0 { //right
 				    x = (_x_hit[|_i].bbox_left-1)-sprite_bbox_right;
-				} else if _velocity[0] < 0 { //left
+				} else if _new_vel_x < 0 { //left
 				    x = (_x_hit[|_i].bbox_right+1)-sprite_bbox_left;
 				}
 		
@@ -48,7 +51,7 @@ x += _velocity[0];
 
 //Horizontal collisions
 var _new_vel_y = _velocity[1];
-y += _new_vel_y;
+
 //Snap
 
 var _y_hit = ds_list_create();
@@ -59,16 +62,17 @@ for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 			if _y_hit[|_i].solid_ {
 				if _new_vel_y > 0 { //right
 					y = (_y_hit[|_i].bbox_top-1)-sprite_bbox_bottom;
-				} else if _velocity[1] < 0 { //left
+				} else if _new_vel_y < 0 { //left
 					y = (_y_hit[|_i].bbox_bottom+1)-sprite_bbox_top;
 				}
 				_velocity[1] = 0;
+				
 			}
 		}
 	}
 }
 ds_list_destroy(_y_hit)
-
+y += _velocity[1];
 //var wall = instance_place(x,y+sign(_new_vel_y),obj_solid);
 //if instance_exists(wall) {
 //	if wall {
