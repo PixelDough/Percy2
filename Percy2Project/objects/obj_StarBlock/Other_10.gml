@@ -3,6 +3,7 @@
 event_inherited();
 
 if sprite_index != spr_block {
+	audio_play_sound(snd_blockHit, 100, false)
 	velocity[1] = -1
 	confetti(x+sprite_width/2, bbox_top, 10);
 	var _mint = instance_create_depth(x+(sprite_width/2), bbox_top-4, depth-1, obj_mint)

@@ -5,13 +5,13 @@
     "name": "physics_object",
     "eventList": [
         {
-            "id": "e7d987ae-36ad-4572-983a-95796032f702",
+            "id": "289c40ff-ee0f-4f28-8eec-256d2c7a7906",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 1,
-            "eventtype": 3,
+            "enumb": 0,
+            "eventtype": 0,
             "m_owner": "8c9312bd-46c7-4333-9376-f2c359a3e57e"
         }
     ],

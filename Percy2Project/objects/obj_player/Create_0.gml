@@ -26,6 +26,7 @@ velocity = [0, 0];
 velocity_carry = [0, 0]
 
 jh = 64;
+jump_time = 15;
 
 holding_present = false;
 present = noone;

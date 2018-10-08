@@ -41,7 +41,7 @@ if solid_ {
 			with _pushable {
 				var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
 				if _hit and _hit != other {
-					//make_dead(self);
+					make_dead(self);
 					exit;
 				}
 			}

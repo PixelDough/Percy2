@@ -22,15 +22,20 @@ if solid_ {
 	for (var _i=0; _i<ds_list_size(_riders); _i++) {
 		if instance_exists(_riders[|_i]) {
 			if (object_is_ancestor(_riders[|_i].object_index, physics_object)){
-				//Keep the player on the ground they're standing on
-				if ceil(_riders[|_i].bbox_bottom) <= ceil(bbox_top) {
-					_riders[|_i].y = ceil(bbox_top);
-					with _riders[|_i] {
-						collide([other.velocity[0],0]);
+				if solid_ {
+					//Keep the player on the ground they're standing on
+					if ceil(_riders[|_i].bbox_bottom) <= ceil(bbox_top) {
+						if _riders[|_i].velocity[1] >0 
+							_riders[|_i].y = ceil(bbox_top);
+						with _riders[|_i] {
+							collide([other.velocity[0],0]);
+						}
+					}
+					if _riders[|_i].velocity[1] >=0 {
+						if (velocity[0] != 0 or velocity[1] != 0)
+							move_push(_riders[|_i])
 					}
 				}
-				if (velocity[0] != 0 or velocity[1] != 0)
-					move_push(_riders[|_i])
 			}
 		}
 	}

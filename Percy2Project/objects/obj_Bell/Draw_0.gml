@@ -1,2 +1,2 @@
-draw_shadow();
+draw_shadow(1);
 draw_self();

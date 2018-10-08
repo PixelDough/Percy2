@@ -48,7 +48,7 @@ ds_list_destroy(_y_hit)
 //if _y_hit {
 //	if _y_hit.solid_ _y_hit_solid = true;
 //}
-if(!_y_hit_solid) {
+if(!_y_hit_solid and !_do_jump) {
     //set gravity - we are in the air!
 	if velocity[1] > 0 {
 		_grav*=2;
@@ -61,25 +61,40 @@ if(!_y_hit_solid) {
 	}
 } else {
     velocity[1] = 0; //no need for gravity on ground
-	
-    //we are on ground so we can check if we need to jump
-    if( _do_jump and velocity[1] >= 0 ){
-        velocity[1] = -sqrt(2 * _grav * _jump_speed);
+	if( _do_jump ){
+	    velocity[1] = -sqrt(2 * _grav * _jump_speed);
 		//audio_play_sound(snd_jump, 100, false);
 	}
 }
+//we are on ground so we can check if we need to jump
+
 
 //y+=velocity[1];
 
 //set horizontal movement based on controls
 velocity[0] = _speed;
-var _x_hit = instance_place(x+(velocity[0]), y, obj_solid);
-if _x_hit {
-	if _x_hit.solid_ {
-		while !place_meeting(x+sign(velocity[0]), y, obj_solid) {
-			x+=sign(velocity[0]);
+//var _x_hit = instance_place(x+(velocity[0]), y, obj_solid);
+var _x_hit = ds_list_create();
+var _x_hit_solid = false;
+instance_place_list(x+velocity[0], y, obj_solid, _x_hit, true);
+for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
+	if instance_exists(_x_hit[|_i]) {
+		if (object_is_ancestor(_x_hit[|_i].object_index, obj_solid) or _x_hit[|_i].object_index == obj_solid){
+			if _x_hit[|_i].solid_ {
+				if velocity[0] != 0 {
+					while !place_meeting(x+sign(velocity[0]), y, _x_hit[|_i]) {
+						x+=sign(velocity[0]);
+					}
+					velocity[0] = 0;
+				}
+			}
 		}
-		velocity[0] = 0;
+	}
+}
+ds_list_destroy(_y_hit)
+if _x_hit_solid {
+	if _x_hit.solid_ {
+		
 	}
 }
 

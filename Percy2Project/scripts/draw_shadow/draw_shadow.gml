@@ -1,4 +1,6 @@
-var _dist = 1;
+///@param distance
+
+var _dist = argument0;
 
 if sprite_index != noone {
 	gpu_set_fog(true, c_black, 0, 1);

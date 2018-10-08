@@ -5,10 +5,40 @@ current_room = instance_place(x, y, obj_room);
 var _x_input = input.r - input.l;
 var _crouch = input.d or (ACTION == PERCY.CROUCH and place_meeting(x, y-8, obj_solid));
 
-var _ground = instance_place(x, y+1, obj_solid)
-grounded = _ground;
-if instance_exists(_ground) grounded = _ground.solid_
+if place_meeting(x, y, obj_zone_water) {
+	if !is_in_water {
+		is_in_water = true;
+	}
+} else {
+	is_in_water = false;
+}
 
+// Determine if on ground
+grounded = false;
+var _y_hit = ds_list_create();
+var _y_hit_solid = false;
+instance_place_list(x, y+1, obj_solid, _y_hit, true);
+for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
+	if instance_exists(_y_hit[|_i]) {
+		if (object_is_ancestor(_y_hit[|_i].object_index, obj_solid) or _y_hit[|_i].object_index == obj_solid){
+			if _y_hit[|_i].solid_ grounded = true;
+		}
+	}
+}
+ds_list_destroy(_y_hit)
+
+// Jump buffer time, to help with platforming
+if velocity[1] < 0 {
+	jump_time = 0;
+}
+if grounded {
+	jump_time = 10;
+} else {
+	jump_time--;
+}
+
+
+// Crouch
 if _crouch {
 	if grounded
 		_x_input = 0;
@@ -16,7 +46,9 @@ if _crouch {
 	//sprite_index = spr_percy_down;
 }
 
+// Clamp player speed
 velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
+
 
 var _no_input = _x_input == 0 and grounded;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
@@ -38,20 +70,13 @@ if (_no_input || _turn) and !(_crouch and abs(velocity[0]) >= 3) {
 
 if !grounded and !_crouch change_action(PERCY.JUMP, true);
 
-
-//if velocity[0] != 0 {
-//	image_xscale = sign(velocity[0]);
-//}
 if _x_input != 0 {
 	image_xscale = sign(_x_input);
 }
 
-//x+=velocity[0];
 image_speed = abs(velocity[0]/(4));
 
 event_user(ACTION);
-
-var _final_velocity = [velocity[0] + velocity_carry[0], velocity[1] + velocity_carry[1]];
 
 var _do_physics = true;
 if present {
@@ -60,10 +85,10 @@ if present {
 	}
 }
 if _do_physics {
-	
+	make_platform(obj_platform)
 	var _float = 1
 	if POWER == POWERS.FLOAT _float = 0.75
-	do_physics(input.action_one_pressed, input.action_one_released, jh/_float, _x_input, velocity[0], grav*_float);
+	do_physics(input.action_one_pressed && (jump_time > 0 || is_in_water), input.action_one_released, jh/_float, _x_input, velocity[0], grav*_float);
 	velocity = collide(velocity);
 }
 
