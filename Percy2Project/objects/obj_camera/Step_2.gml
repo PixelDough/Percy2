@@ -15,7 +15,8 @@ if instance_exists(obj_player) {
 }
 //if target_object == obj_player {
 	var _room = noone;
-	_room = target_object.current_room;
+	if target_object == obj_player
+		_room = target_object.current_room;
 	if _room != noone {
 		target_x = clamp(target_x, _room.x + width/2, _room.bbox_right - width/2 + 1);
 		target_y = clamp(target_y, _room.y + height/2, _room.bbox_bottom - height/2 + 1);

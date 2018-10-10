@@ -1,6 +1,6 @@
 ///@param velocity
 
-make_platform(obj_platform)
+//make_platform(obj_platform)
 
 var _velocity = argument0;
 
@@ -51,7 +51,7 @@ x += _velocity[0];
 
 //Horizontal collisions
 var _new_vel_y = _velocity[1];
-
+y += _velocity[1];
 //Snap
 
 var _y_hit = ds_list_create();
@@ -72,7 +72,7 @@ for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 	}
 }
 ds_list_destroy(_y_hit)
-y += _velocity[1];
+
 //var wall = instance_place(x,y+sign(_new_vel_y),obj_solid);
 //if instance_exists(wall) {
 //	if wall {

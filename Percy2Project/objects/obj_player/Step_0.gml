@@ -90,7 +90,7 @@ if present {
 	}
 }
 if _do_physics {
-	make_platform(obj_platform)
+	//make_platform(obj_platform)
 	var _float = 1
 	if POWER == POWERS.FLOAT _float = 0.75
 	var _water_float = 1;

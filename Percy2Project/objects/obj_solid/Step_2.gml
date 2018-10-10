@@ -29,7 +29,7 @@ if solid_ {
 						if _riders[|_i].velocity[1] >0 
 							_riders[|_i].y = ceil(bbox_top);
 						with _riders[|_i] {
-							collide([other.velocity[0],other.velocity[1]]);
+							collide([other.velocity[0],0]);
 						}
 					}
 					if _riders[|_i].velocity[1] >=0 {

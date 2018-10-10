@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "54479b24-bee5-4959-b7e6-32eb4500b2c9",
+            "Value": {
+                "id": "3a7268e7-491d-4cee-ad0c-0451a5858760",
+                "resourcePath": "sounds\\snd_splash\\snd_splash.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5568de1c-d8b2-41d2-bef1-847a0136c18f",
             "Value": {
                 "id": "db79eb7a-cba1-4ba2-9efb-6a59a35c26dc",
