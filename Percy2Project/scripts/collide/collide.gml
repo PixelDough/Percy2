@@ -64,6 +64,8 @@ for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 					y = (_y_hit[|_i].bbox_top-1)-sprite_bbox_bottom;
 				} else if _new_vel_y < 0 { //left
 					y = (_y_hit[|_i].bbox_bottom+1)-sprite_bbox_top;
+					if self == obj_player
+						with _y_hit[|_i] event_user(0);
 				}
 				_velocity[1] = 0;
 				

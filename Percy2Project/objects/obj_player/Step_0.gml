@@ -95,7 +95,7 @@ if _do_physics {
 	if POWER == POWERS.FLOAT _float = 0.75
 	var _water_float = 1;
 	if is_in_water _water_float = 0.5;
-	do_physics(input.action_one_pressed && (jump_time > 0 || is_in_water), input.action_one_released, jh/_float, _x_input*_water_float, velocity[0], grav*_float*_water_float);
+	do_physics(input.action_one_pressed && (jump_time > 0 || is_in_water), input.action_one_released, (jh/_float)*_water_float, _x_input*_water_float, velocity[0], grav*_float);
 	velocity = collide(velocity);
 }
 

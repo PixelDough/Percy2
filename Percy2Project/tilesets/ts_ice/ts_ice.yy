@@ -2,7 +2,7 @@
     "id": "b8e0e7ec-a060-4e4f-9709-312a2d71ec38",
     "modelName": "GMTileSet",
     "mvc": "1.11",
-    "name": "ts_0",
+    "name": "ts_ice",
     "auto_tile_sets": [
         {
             "id": "29649a3b-4c7d-4a1d-acd7-859142fa2b76",

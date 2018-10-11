@@ -183,6 +183,22 @@
             }
         },
         {
+            "Key": "2517302b-7a60-457d-8d48-6967735667e8",
+            "Value": {
+                "id": "c189db9e-b79c-4553-a3a3-cf9765a87ec3",
+                "resourcePath": "sprites\\bg_gingerbreadTown1\\bg_gingerbreadTown1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2589ceda-2d2c-48be-a2a9-3abfc4c331ef",
+            "Value": {
+                "id": "212eb28f-6623-418e-94cf-20e29399a0a5",
+                "resourcePath": "sprites\\bg_gingerbreadTown2\\bg_gingerbreadTown2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "28c288c1-7e01-43d7-8f20-39cb019d72b9",
             "Value": {
                 "id": "0a45bfb2-2f6c-44a8-b7cc-e4271f033683",
@@ -327,6 +343,14 @@
             }
         },
         {
+            "Key": "3f7964f4-cf33-42ca-8c2d-ff6efd0956d7",
+            "Value": {
+                "id": "a682b2f0-da7b-4eec-b73d-578e45e85805",
+                "resourcePath": "rooms\\rm_gingerbread_town\\rm_gingerbread_town.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "3fb17e5d-4f07-4ad6-ba14-b4f7e13805d4",
             "Value": {
                 "id": "0fd376f0-aedd-43ab-8109-a2631d7b8fa9",
@@ -363,6 +387,14 @@
             "Value": {
                 "id": "a8d3eb8f-5731-43c9-a5e1-0b45815b9dd7",
                 "resourcePath": "views\/4783c12d-9d53-4276-9750-5436b424907b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4c488b44-79bd-45ad-8fcc-1fc49dac9c57",
+            "Value": {
+                "id": "a8ee7352-572a-43a5-84cf-a8324627bbef",
+                "resourcePath": "views\\4c488b44-79bd-45ad-8fcc-1fc49dac9c57.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -882,7 +914,7 @@
             "Key": "b8e0e7ec-a060-4e4f-9709-312a2d71ec38",
             "Value": {
                 "id": "984f4dca-9638-4332-b2c7-b1d0bda7a866",
-                "resourcePath": "tilesets\/ts_0\/ts_0.yy",
+                "resourcePath": "tilesets\\ts_ice\\ts_ice.yy",
                 "resourceType": "GMTileSet"
             }
         },
@@ -935,6 +967,14 @@
             }
         },
         {
+            "Key": "c05043af-d713-4424-9fa5-7c9e84548b46",
+            "Value": {
+                "id": "d6f3387b-3cdd-4364-b728-21955f5f7381",
+                "resourcePath": "views\\466b04e7-cb0d-4b86-baab-55434ef24bbc-room.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c05c4b3c-0feb-4398-96d9-30caebd3bc1c",
             "Value": {
                 "id": "b3035ece-94fa-42fd-890e-860280500bd6",
@@ -967,6 +1007,14 @@
             }
         },
         {
+            "Key": "c296cffa-2e40-4efc-9167-858a0b0bcd0d",
+            "Value": {
+                "id": "e9bbf523-5cb0-4ffc-a1af-6d355db162f6",
+                "resourcePath": "tilesets\\ts_bg_gingerbreadTown\\ts_bg_gingerbreadTown.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "c7f90633-becc-419f-96e4-5c22dc8bc6da",
             "Value": {
                 "id": "6c0d0b02-8859-44b1-8fe6-b8e08f967cae",
@@ -996,6 +1044,14 @@
                 "id": "2a2fa246-f6e9-4c30-8140-5a7c6fe771ca",
                 "resourcePath": "scripts\\hit_block\\hit_block.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ca239f52-3160-4325-a0a7-c1f2ebd9a8ff",
+            "Value": {
+                "id": "c7e2c74a-0bfb-4a54-8001-79ca20f03972",
+                "resourcePath": "tilesets\\ts_gingerbread\\ts_gingerbread.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -1108,6 +1164,14 @@
                 "id": "688cecd3-54f0-47f3-a1de-c414baa5cebd",
                 "resourcePath": "views\/da5c38e9-80e9-448e-9d87-ffb0dba478fc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "db759fdd-c3fa-4b2d-977d-21e7e8a27fe7",
+            "Value": {
+                "id": "66cea547-95c9-4201-9258-ea8454651377",
+                "resourcePath": "sprites\\spr_bg_gingerbreadTown\\spr_bg_gingerbreadTown.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
