@@ -14,24 +14,27 @@ var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset
 var _new_vel_x = _velocity[0];
 
 //Snap
-var _x_hit = ds_list_create();
-instance_place_list(x+sign(_new_vel_x), y, obj_solid, _x_hit, true);
-for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
-	if instance_exists(_x_hit[|_i]) {
-		if (object_is_ancestor(_x_hit[|_i].object_index, obj_solid) or _x_hit[|_i].object_index == obj_solid){
-			if _x_hit[|_i].solid_ {
+//var _x_hit = ds_list_create();
+var _x_hit = instance_place_plus(x+sign(_new_vel_x), y, obj_solid);
+if _x_hit {
+//instance_place_list(x+sign(_new_vel_x), y, obj_solid, _x_hit, true);
+//for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
+//	if instance_exists(_x_hit[|_i]) {
+//		if (object_is_ancestor(_x_hit[|_i].object_index, obj_solid) or _x_hit[|_i].object_index == obj_solid){
+//			if _x_hit[|_i].solid_ {
 				if _new_vel_x > 0 { //right
-				    x = (_x_hit[|_i].bbox_left-1)-sprite_bbox_right;
+				    x = (_x_hit.bbox_left-1)-sprite_bbox_right;
 				} else if _new_vel_x < 0 { //left
-				    x = (_x_hit[|_i].bbox_right+1)-sprite_bbox_left;
+				    x = (_x_hit.bbox_right+1)-sprite_bbox_left;
 				}
 		
 				_velocity[0] = 0;
-			}
-		}
-	}
 }
-ds_list_destroy(_x_hit)
+//			}
+//		}
+//	}
+//}
+//ds_list_destroy(_x_hit)
 x += _velocity[0];
 //if place_meeting(x+sign(_new_vel_x),y,obj_solid) {
 //    var wall = instance_place(x+sign(_new_vel_x),y,obj_solid);
@@ -54,26 +57,28 @@ var _new_vel_y = _velocity[1];
 y += _velocity[1];
 //Snap
 
-var _y_hit = ds_list_create();
-instance_place_list(x, y+sign(_new_vel_y), obj_solid, _y_hit, true);
-for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
-	if instance_exists(_y_hit[|_i]) {
-		if (object_is_ancestor(_y_hit[|_i].object_index, obj_solid) or _y_hit[|_i].object_index == obj_solid){
-			if _y_hit[|_i].solid_ {
+//var _y_hit = ds_list_create();
+var _y_hit = instance_place_plus(x, y+sign(_new_vel_y), obj_solid)
+if _y_hit {
+//instance_place_list(x, y+sign(_new_vel_y), obj_solid, _y_hit, true);
+//for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
+//	if instance_exists(_y_hit[|_i]) {
+//		if (object_is_ancestor(_y_hit[|_i].object_index, obj_solid) or _y_hit[|_i].object_index == obj_solid){
+//			if _y_hit[|_i].solid_ {
 				if _new_vel_y > 0 { //right
-					y = (_y_hit[|_i].bbox_top-1)-sprite_bbox_bottom;
+					y = (_y_hit.bbox_top-1)-sprite_bbox_bottom;
 				} else if _new_vel_y < 0 { //left
-					y = (_y_hit[|_i].bbox_bottom+1)-sprite_bbox_top;
+					y = (_y_hit.bbox_bottom+1)-sprite_bbox_top;
 					if self == obj_player
-						with _y_hit[|_i] event_user(0);
+						with _y_hit event_user(0);
 				}
 				_velocity[1] = 0;
-				
-			}
-		}
-	}
 }
-ds_list_destroy(_y_hit)
+//			}
+//		}
+//	}
+//}
+//ds_list_destroy(_y_hit)
 
 //var wall = instance_place(x,y+sign(_new_vel_y),obj_solid);
 //if instance_exists(wall) {

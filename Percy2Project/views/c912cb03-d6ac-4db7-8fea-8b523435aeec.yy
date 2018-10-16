@@ -7,7 +7,10 @@
         "5d42ad2c-0561-4589-9e65-4490c5cb0c90",
         "58d8fef1-5804-4ae4-8a9e-efcd896a7b6f",
         "acc45824-fadd-472c-8e7f-dac1bab3b855",
-        "137e8ee2-85ed-420f-83d5-26146d1551f6"
+        "137e8ee2-85ed-420f-83d5-26146d1551f6",
+        "3008aa4d-4776-4575-9cfa-3761325f795e",
+        "1db04a17-eaab-4576-b0d3-18748c79e67e",
+        "0b6f6a7a-58de-4b62-88b5-3f2e5e8415bd"
     ],
     "filterType": "GMSprite",
     "folderName": "META",

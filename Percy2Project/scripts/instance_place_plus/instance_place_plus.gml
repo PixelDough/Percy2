@@ -1,0 +1,20 @@
+///@arg x
+///@arg y
+///@arg object
+
+var _x = argument0;
+var _y = argument1;
+var _object = argument2;
+
+var _hit_list = ds_list_create();
+instance_place_list(_x, _y, obj_solid, _hit_list, true);
+for (var _i=0; _i<ds_list_size(_hit_list); _i++) {
+	if instance_exists(_hit_list[|_i]) {
+		if (object_is_ancestor(_hit_list[|_i].object_index, obj_solid) or _hit_list[|_i].object_index == obj_solid){
+			if _hit_list[|_i].solid_ {
+				return _hit_list[|_i];
+			}
+		}
+	}
+}
+ds_list_destroy(_hit_list);

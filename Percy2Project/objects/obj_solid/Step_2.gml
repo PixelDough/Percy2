@@ -26,7 +26,7 @@ if solid_ {
 				if solid_ {
 					//Keep the player on the ground they're standing on
 					if ceil(_riders[|_i].bbox_bottom) <= ceil(bbox_top) {
-						if _riders[|_i].velocity[1] >0 
+						if _riders[|_i].velocity[1] >= 0
 							_riders[|_i].y = ceil(bbox_top);
 						with _riders[|_i] {
 							collide([other.velocity[0],0]);
