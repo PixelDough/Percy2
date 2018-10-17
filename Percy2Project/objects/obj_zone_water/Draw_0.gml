@@ -1,1 +1,1 @@
-if global.time % 2 == 0 draw_self();
+//if global.time % 2 == 0 draw_self();

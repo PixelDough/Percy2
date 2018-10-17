@@ -1,2 +1,2 @@
 draw_shadow(1);
-draw_self();
+draw_sprite(sprites[POWER-1], image_index, x, y);

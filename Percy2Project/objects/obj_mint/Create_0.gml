@@ -1,3 +1,6 @@
+sprites = [spr_mint, spr_mint_hard];
+POWER = POWERS.ICE;
+sprite_index = sprites[POWER-1];
 
 spd = 0.05;
 spd_mul = 1;

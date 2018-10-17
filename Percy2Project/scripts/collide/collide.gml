@@ -54,7 +54,8 @@ x += _velocity[0];
 
 //Horizontal collisions
 var _new_vel_y = _velocity[1];
-y += _velocity[1];
+if abs(_velocity[1]) > 0.30
+	y += _velocity[1];
 //Snap
 
 //var _y_hit = ds_list_create();
