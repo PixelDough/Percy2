@@ -13,7 +13,7 @@ if present {
 		present.x = x
 		if present.is_lifted {
 			present.sprite_index = spr_present
-			present.y = bbox_top-4;
+			present.y = bbox_top-2;
 			
 			if input.action_two_released {
 				present.velocity[0] = (image_xscale*3) //+ (velocity[0]);

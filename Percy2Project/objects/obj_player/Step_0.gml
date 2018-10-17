@@ -9,7 +9,8 @@ var _water_hit = instance_place(x, y, obj_zone_water)
 if _water_hit {
 	if !is_in_water {
 		is_in_water = true;
-		instance_create_depth(x, _water_hit.bbox_top, depth+1, obj_splash);
+		if bbox_top < _water_hit.bbox_top
+			instance_create_depth(x, _water_hit.bbox_top, depth+1, obj_splash);
 	}
 } else {
 	if is_in_water {
@@ -85,7 +86,7 @@ event_user(ACTION);
 
 var _do_physics = true;
 if present {
-	if present.is_held and present.y > bbox_top+4 {
+	if !present.is_lifted {
 		_do_physics = false;
 	}
 }

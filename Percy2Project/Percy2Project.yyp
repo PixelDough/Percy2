@@ -815,6 +815,14 @@
             }
         },
         {
+            "Key": "9097f4bb-4bc9-4c78-9bd7-5b559b2134a8",
+            "Value": {
+                "id": "15af2b4c-c899-429b-9899-a06e1d5df9c2",
+                "resourcePath": "scripts\\instance_nearest_notme\\instance_nearest_notme.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "90e8c013-38fd-491c-90de-538384c3a512",
             "Value": {
                 "id": "3fd7400b-0776-4b6d-b8b9-6acd09a12461",
@@ -1132,6 +1140,14 @@
                 "id": "037c768e-9623-47ee-927e-26ddf869dd61",
                 "resourcePath": "scripts\/pal_swap_set_layer\/pal_swap_set_layer.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c166966f-c2cf-4d08-9741-ccf497ae1c9b",
+            "Value": {
+                "id": "e328ae0f-b1ca-4e66-9920-f3703ff51aa9",
+                "resourcePath": "sprites\\spr_percy_carry\\spr_percy_carry.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1504,7 +1520,8 @@
         "ca181b51-74bb-419b-82b0-e7a30ee8e612",
         "ba72f27f-6fd4-4995-9157-8ae441214914",
         "0e7f0892-60e1-4289-bb40-ea7e5f0f7ebf",
-        "a89b91fc-e47f-4133-91ef-4302cab33e51"
+        "a89b91fc-e47f-4133-91ef-4302cab33e51",
+        "9097f4bb-4bc9-4c78-9bd7-5b559b2134a8"
     ],
     "tutorial": ""
 }
