@@ -1,4 +1,3 @@
-if !surface_exists(surface) surface = surface_create(camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]));
 
 surface_set_target(surface);
 gpu_set_fog(true, c_black, 0, 1);
