@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-//moving_platform_physics()
+draw_text(30, 30, velocity[1]);

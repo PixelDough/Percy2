@@ -42,13 +42,18 @@ for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 	}
 }
 ds_list_destroy(_y_hit)
+
+var _platform = instance_place_plus(x, y+2, obj_platform);
+if _platform {
+	if _platform.solid_ _y_hit_solid = true;
+}
 	
 //var _y_hit = instance_place( x, y+1, obj_solid )
 
 //if _y_hit {
 //	if _y_hit.solid_ _y_hit_solid = true;
 //}
-if(!_y_hit_solid and !_do_jump) {
+if !_y_hit_solid and !_do_jump and !grounded {
     //set gravity - we are in the air!
 	if velocity[1] > 0 {
 		_grav*=2;
