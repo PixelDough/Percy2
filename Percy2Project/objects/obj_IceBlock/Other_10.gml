@@ -4,7 +4,7 @@ event_inherited();
 
 if (object_index == obj_IceBlockBig and obj_player.POWER == POWERS.STRONG) or (object_index != obj_IceBlockBig) {
 	instance_destroy();
-	audio_play_sound(snd_blockBreak, 100, false);
+	play_sound(snd_blockBreak);
 	//if place_meeting(x, y, obj_player) {
 		//if obj_player.POWER != POWERS.STRONG 
 			//obj_player.velocity[1] = 0

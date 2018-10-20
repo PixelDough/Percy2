@@ -1,4 +1,5 @@
 make_platform(obj_platform)
+//moving_platform_physics()
 
 current_room = instance_place(x, y, obj_room);
 
@@ -23,7 +24,7 @@ if _water_hit {
 grounded = false;
 var _y_hit = ds_list_create();
 var _y_hit_solid = false;
-instance_place_list(x, y+1, obj_solid, _y_hit, true);
+instance_place_list(x, y+4, obj_solid, _y_hit, true);
 for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 	if instance_exists(_y_hit[|_i]) {
 		if (object_is_ancestor(_y_hit[|_i].object_index, obj_solid) or _y_hit[|_i].object_index == obj_solid){
@@ -91,7 +92,6 @@ if present {
 	}
 }
 if _do_physics {
-	//make_platform(obj_platform)
 	var _float = 1
 	if POWER == POWERS.FLOAT _float = 0.75
 	var _water_float = 1;
