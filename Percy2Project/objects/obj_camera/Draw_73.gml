@@ -9,7 +9,7 @@ if instance_exists(obj_player) {
 	if(target_object.y > target_y + y_buff || target_object.y < target_y - y_buff) {
 		target_y = target_object.y - (y_buff * sign(target_object.y - target_y));
 	}
-} else {
+} else if instance_exists(target_object) {
 	target_x = target_object.x;
 	target_y = target_object.y;
 }

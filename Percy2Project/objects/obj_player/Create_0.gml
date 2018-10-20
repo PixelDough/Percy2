@@ -5,7 +5,8 @@ enum PERCY {
 	RUN,
 	TURN,
 	JUMP,
-	CROUCH
+	CROUCH,
+	CLIMB
 }
 
 enum POWERS {

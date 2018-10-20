@@ -7,5 +7,6 @@ var _dead = instance_create_layer(_target.x, _target.y, "META", obj_dead)
 _dead.sprite_index = _target_sprite;
 _dead.image_index = _target_image_index;
 _dead.image_speed = 0;
+_dead.y += _dead.sprite_yoffset
 
 instance_deactivate_object(_target)
