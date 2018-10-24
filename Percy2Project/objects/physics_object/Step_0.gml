@@ -1,3 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
-//moving_platform_physics()
+
+make_platform(obj_platform)

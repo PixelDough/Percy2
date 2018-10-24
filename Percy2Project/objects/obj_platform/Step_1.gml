@@ -1,5 +1,6 @@
 //solid_ = false
 event_inherited()
+solid_ = false
 
 
 //velocity[1] = cos(global.time/20);
