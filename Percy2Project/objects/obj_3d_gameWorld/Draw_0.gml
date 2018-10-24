@@ -18,7 +18,7 @@ var y4 = (y+sprite_height/4);
 //draw_self()
 
 //draw_sprite_ext(sprite_index, image_index, x, y, 1-abs(lengthdir_y(1, image_angle)/2), 1-abs(lengthdir_x(1, image_angle)/2), image_angle, c_white, 100)
-var _surf = surface_create(800,960);
+var _surf = surface_create(800,420);
 surface_set_target(_surf);
 
 //draw_sprite_ext(sprite_index, image_index, x, y, 0.25+abs(cos(degtorad(image_angle))/2), 0.25+abs(sin(degtorad(image_angle))/2), image_angle, c_white, 100)
@@ -27,10 +27,14 @@ draw_set_color(c_black)
 //draw_line(x, y, x-(cos(degtorad(image_angle))/2)*10, y+(sin(degtorad(image_angle))/2)*10);
 
 surface_reset_target();
-draw_surface_ext(_surf, 0, 0, 1, 0.4, 0, c_white, 100);
-surface_free(_surf);
+var _surf_final = surface_create(sprite_width*2, sprite_height*2);
+surface_copy_part(_surf_final, 0, 0, _surf, x-(surface_get_width(_surf_final)/2), y-(surface_get_height(_surf_final)/2), surface_get_width(_surf_final), surface_get_height(_surf_final))
 
-//image_angle-=0.5;
+draw_surface_ext(_surf_final, x-(surface_get_width(_surf_final)/2), y-(surface_get_height(_surf_final)*yscale)/2, 1, yscale, 0, c_white, 100);
+surface_free(_surf);
+surface_free(_surf_final);
+
+image_angle-=0.5;
 
 //vertex_submit(square, pr_trianglelist, sprite_get_texture(sprite_index, image_index));
 
