@@ -43,10 +43,10 @@ for (var _i=0; _i<ds_list_size(_y_hit); _i++) {
 }
 ds_list_destroy(_y_hit)
 
-var _platform = instance_place_plus(x, y+1, obj_platform);
-if _platform {
-	if _platform.solid_ _y_hit_solid = true;
-}
+//var _platform = instance_place_plus(x, y+1, obj_platform);
+//if _platform {
+//	if _platform.solid_ _y_hit_solid = true;
+//}
 	
 //var _y_hit = instance_place( x, y+1, obj_solid )
 

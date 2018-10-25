@@ -431,11 +431,27 @@
             }
         },
         {
+            "Key": "34483581-23d1-4923-9f31-b253e78a864d",
+            "Value": {
+                "id": "e60f160a-f866-458c-98c9-e75ae7943654",
+                "resourcePath": "sprites\\spr_bubble\\spr_bubble.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "36779fd7-fadb-41f5-be48-7ee50322c0d3",
             "Value": {
                 "id": "05b10a43-5e5f-4097-aff9-41f21e3d6843",
                 "resourcePath": "objects\/obj_depth_swapper_end\/obj_depth_swapper_end.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "371b2d31-5d12-4460-840d-5c13e4041669",
+            "Value": {
+                "id": "bf12436f-75ee-4a9a-ab19-a50f82c7b09e",
+                "resourcePath": "sprites\\spr_title_bg2\\spr_title_bg2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -532,6 +548,14 @@
                 "id": "0fd376f0-aedd-43ab-8109-a2631d7b8fa9",
                 "resourcePath": "scripts\/pal_swap_get_pal_count\/pal_swap_get_pal_count.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "41882e97-574f-4afc-81d2-c5463b5ec9d6",
+            "Value": {
+                "id": "2ab2b353-69c9-44ab-be13-2632a92a9ece",
+                "resourcePath": "sprites\\spr_percyTitle\\spr_percyTitle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1095,6 +1119,14 @@
             }
         },
         {
+            "Key": "9242a269-2a7b-4a20-82c0-d7ecf6f5898d",
+            "Value": {
+                "id": "8fb96cc2-0c18-48c1-88d4-d9aa2d11443e",
+                "resourcePath": "objects\\obj_3d_percy\\obj_3d_percy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "932dd44f-ad6d-49b8-9ba5-e7e2fa071659",
             "Value": {
                 "id": "a69b4139-ef40-44aa-b96f-fd76f182e313",
@@ -1652,6 +1684,14 @@
                 "id": "850b6dc8-ed29-4ece-9e26-f5889477f968",
                 "resourcePath": "views\/d4497cb7-fdc7-4f8b-bb72-066eb3ce08d4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d499484d-89dc-4c43-9361-22da2d0e1676",
+            "Value": {
+                "id": "2055d7e6-cd24-4b5b-abc2-82e0001b8b6c",
+                "resourcePath": "objects\\obj_bubble\\obj_bubble.yy",
+                "resourceType": "GMObject"
             }
         },
         {
