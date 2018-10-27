@@ -2,7 +2,8 @@
 // Inherit the parent event
 event_inherited();
 
-if (object_index == obj_IceBlockBig and obj_player.POWER == POWERS.STRONG) or (object_index != obj_IceBlockBig) {
+image_index++;
+if image_index == image_number or (obj_player.POWER == POWERS.STRONG) {
 	instance_destroy();
 	play_sound(snd_blockBreak);
 	//if place_meeting(x, y, obj_player) {
