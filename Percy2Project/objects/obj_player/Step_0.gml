@@ -7,7 +7,7 @@ var _crouch = input.d or (ACTION == PERCY.CROUCH and place_meeting(x, y-8, obj_s
 
 var _water_to_ground = instance_place_plus(x, y+9+velocity[1], obj_zone_water)
 if _water_to_ground {
-	if POWER == POWERS.ICE and !instance_place_plus(round(x/16)*16, _water_to_ground.y-8, obj_IceBlock) and y < _water_to_ground.bbox_top instance_create_layer(round(x/16)*16, _water_to_ground.y-8, "Instances", obj_IceBlock)
+	if POWER == POWERS.ICE and !instance_place_plus(x, y+1, obj_IceBlock) and y <= _water_to_ground.bbox_top-8 and velocity[1] >= 0 instance_create_layer(floor(x/16)*16, _water_to_ground.y-8, "Instances", obj_IceBlock)
 }
 
 var _water_hit = instance_place(x, y, obj_zone_water)
