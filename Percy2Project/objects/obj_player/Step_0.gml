@@ -1,9 +1,20 @@
-make_platform(obj_platform)
+make_platform(obj_platform);
+
+if input.d_p {
+	if alarm[0] <= 0 {
+		alarm[0] = 15;
+	} else {
+		if instance_place_plus(x, y+1, obj_platform) {
+			y++;
+			make_platform(obj_platform);
+		}
+	}
+}
 
 current_room = instance_place(x, y, obj_room);
 
 var _x_input = input.r - input.l;
-var _crouch = input.d or (ACTION == PERCY.CROUCH and place_meeting(x, y-8, obj_solid));
+var _crouch = input.d or (ACTION == PERCY.CROUCH and instance_place_plus(x, bbox_top, obj_solid));
 
 var _water_to_ground = instance_place_plus(x, y+9+velocity[1], obj_zone_water)
 if _water_to_ground {

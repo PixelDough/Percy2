@@ -1,4 +1,4 @@
-if room == parent room_goto_next();
+if room <= parent room_goto_next();
 tiles_to_solid("Collisions");
 global.time = 1;
 

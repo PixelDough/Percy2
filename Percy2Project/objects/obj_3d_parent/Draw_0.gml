@@ -1,1 +1,2 @@
+//draw_sprite_ext(sprite_index, image_index, x, obj_3d_gameWorld.y+(((y-obj_3d_gameWorld.y))*obj_3d_gameWorld.yscale), 1, 1, image_angle, c_black, 100);
 draw_sprite_ext(sprite_index, image_index, x, obj_3d_gameWorld.y+(((y-obj_3d_gameWorld.y))*obj_3d_gameWorld.yscale), 1, 1, 0, c_white, 100)

@@ -11,6 +11,6 @@ pal_swap_init_system(shd_pal_swapper);
 global.checkpoint = [0, 0, room];
 
 global.fontString = "!\"©%'()^+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
-global.font8px = font_add_sprite_ext(spr_font8px, global.fontString, false, 0)
+global.font8px = font_add_sprite_ext(spr_font8px, global.fontString, false, -1)
 global.font16px = font_add_sprite_ext(spr_font16px, global.fontString, false, 0)
 draw_set_font(global.font8px);
