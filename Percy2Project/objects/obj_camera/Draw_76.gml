@@ -31,6 +31,13 @@ y = target_y;
 
 camera_set_view_pos(view_camera[0], x - width/2, y - height/2);
 
+if layer_exists("Stars") {
+	layer_x("Stars", x*0.9);
+	//layer_y("Mountains", y - height/2);
+	//layer_y("Mountains", y-(room_height-sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Mountains"))))));
+	layer_y("Stars", y*0.9);
+}
+
 if layer_exists("Mountains") {
 	layer_x("Mountains", x/2);
 	//layer_y("Mountains", y - height/2);
