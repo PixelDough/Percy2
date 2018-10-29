@@ -4,7 +4,7 @@ if input.d_p {
 	if alarm[0] <= 0 {
 		alarm[0] = 15;
 	} else {
-		if instance_place_plus(x, y+1, obj_platform) {
+		if instance_place_plus(x, y+2, obj_platform) {
 			y++;
 			make_platform(obj_platform);
 		}
@@ -25,8 +25,10 @@ var _water_hit = instance_place(x, y, obj_zone_water)
 if _water_hit {
 	if !is_in_water {
 		is_in_water = true;
-		if bbox_top < _water_hit.bbox_top
+		if bbox_top < _water_hit.bbox_top {
 			instance_create_depth(x, _water_hit.bbox_top, depth+1, obj_splash);
+			gamepad_set_vibration(0, 1, 1)
+		}
 	}
 } else {
 	if is_in_water {
@@ -116,3 +118,5 @@ if _do_physics {
 }
 
 percy_present();
+
+if bbox_top > room_height room_restart();

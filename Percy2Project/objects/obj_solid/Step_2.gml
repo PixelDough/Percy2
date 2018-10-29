@@ -28,9 +28,10 @@ if solid_ {
 				if solid_ {
 					//Keep the player on the ground they're standing on
 					with _riders[|_i] {
-						x += other.velocity[0];
-						y += other.velocity[1];
+						//x += other.velocity[0];
+						//y += other.velocity[1];
 					}
+					move_push(_riders[|_i]);
 
 				}
 			}

@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_3d_test",
+    "name": "rm_title_3d",
     "id": "3faebfab-492c-4e6e-97c3-76f722f59330",
     "creationCodeFile": "",
     "inheritCode": false,

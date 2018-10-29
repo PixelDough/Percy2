@@ -36,3 +36,4 @@ for (var _i = 0; _i <= 1; _i++) {
 
 	pause_pressed = false;
 }
+
