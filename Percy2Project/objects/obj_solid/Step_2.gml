@@ -25,14 +25,10 @@ if solid_ {
 				with _riders[|_i] {
 					make_platform(obj_platform);
 				}
-				if solid_ {
-					//Keep the player on the ground they're standing on
+				if solid_ and _riders[|_i].y < y {
 					with _riders[|_i] {
-						//x += other.velocity[0];
-						//y += other.velocity[1];
+						collide(other.velocity);
 					}
-					move_push(_riders[|_i]);
-
 				}
 			}
 		}
@@ -42,3 +38,19 @@ if solid_ {
 
 x += velocity[0];
 y += velocity[1];
+
+if solid_ {
+	var _x_hit = instance_place_plus(x, y, physics_object);
+	with _x_hit {
+		var _hit_kill = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
+		if _hit_kill {
+			make_dead(self);
+			exit;
+		}
+	}
+	while _x_hit {
+		_x_hit.x += sign(velocity[0]);
+		_x_hit.y += sign(velocity[1]);
+		_x_hit = instance_place_plus(x, y, physics_object);
+	}
+}

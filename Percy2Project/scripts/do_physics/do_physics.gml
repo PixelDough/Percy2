@@ -87,9 +87,9 @@ for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
 		if (object_is_ancestor(_x_hit[|_i].object_index, obj_solid) or _x_hit[|_i].object_index == obj_solid){
 			if _x_hit[|_i].solid_ {
 				if velocity[0] != 0 {
-					while !place_meeting(x+sign(velocity[0]), y, _x_hit[|_i]) {
-						x+=sign(velocity[0]);
-					}
+					//while !place_meeting(x+sign(velocity[0]), y, _x_hit[|_i]) {
+					//	x+=sign(velocity[0]);
+					//}
 					velocity[0] = 0;
 				}
 			}

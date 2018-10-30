@@ -25,18 +25,15 @@ if solid_ {
 	//var pushable_list = ds_list_create();
 	
 	if object_is_ancestor(_pushable.object_index, physics_object) and _pushable.object_index != obj_solid {
-		while (place_meeting(x, y, _pushable))// and (sign(y-_pushable.y) == sign(_pushable.velocity[1])) //Collision with an additional pixel in the moving direction
+		if (place_meeting(x+sign(velocity[0]), y+sign(velocity[1]), _pushable))// and (sign(y-_pushable.y) == sign(_pushable.velocity[1])) //Collision with an additional pixel in the moving direction
 		{
 			//_pushable.x += x-xprevious;
 			//_pushable.y += y-yprevious;
 	
-			if x-xprevious == 0 and y-yprevious == 0 {
-				//_pushable.x += 1;
-				_pushable.y -= 1;
-			} else {
+			//if velocity[0] != 0 or velocity[1] != 0 {
 				_pushable.x += sign(x-xprevious);
 				_pushable.y += sign(y-yprevious);
-			}
+			//}
 		
 			with _pushable {
 				var _hit = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)

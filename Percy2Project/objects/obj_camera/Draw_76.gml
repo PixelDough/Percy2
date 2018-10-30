@@ -1,5 +1,6 @@
 //target_object = noone;
 
+if !instance_exists(obj_player) and target_object == obj_player target_object = self
 if instance_exists(obj_player) {
 	//target_object = obj_player;
 	
@@ -9,7 +10,8 @@ if instance_exists(obj_player) {
 	if(target_object.y > target_y + y_buff || target_object.y < target_y - y_buff) {
 		target_y = target_object.y - (y_buff * sign(target_object.y - target_y));
 	}
-} else {
+} else if target_object != obj_player {
+	
 	target_x = target_object.x;
 	target_y = target_object.y;
 }
