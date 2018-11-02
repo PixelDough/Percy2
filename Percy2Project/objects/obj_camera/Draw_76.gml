@@ -51,3 +51,8 @@ if layer_exists("NorthernLights") {
 	//layer_y("Mountains", y - height/2);
 	layer_y("NorthernLights", 0+(y-height/2)*0.85);
 }
+
+//if instance_exists(obj_player) {
+//	instance_deactivate_layer(layer_get_id("Instances"));
+//	instance_activate_region(x-width/2, y-height/2, width, height, true)
+//}
