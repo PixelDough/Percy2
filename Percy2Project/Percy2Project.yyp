@@ -4257,6 +4257,25 @@
             }
         },
         {
+            "Key": "bc0b741c-4f7e-438b-a9d2-b0d56589e3fe",
+            "Value": {
+                "id": "9147c4b6-2e6c-4a91-9900-07e1b7bd1ab9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_jingleBell_grav\/obj_jingleBell_grav.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bd41b3a3-acfa-43cd-8da1-7505f17f8c77",
             "Value": {
                 "id": "c0b82629-a39b-413e-bed7-8a49c2faa415",
