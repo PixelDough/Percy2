@@ -1,5 +1,7 @@
 make_platform(obj_platform)
-grounded = place_meeting(x, y+1, obj_solid);
+grounded = instance_place_plus(x, y+1, obj_solid);
+
+water_to_ice(true)
 
 //if velocity[0] != 0 {
 //	image_xscale = sign(velocity[0]);
@@ -8,7 +10,7 @@ if velocity[0] != 0 {
 	image_xscale = sign(velocity[0]);
 }
 
-var _hit = instance_place(x+sign(velocity[0]), y, obj_solid);
+var _hit = instance_place_plus(x+sign(velocity[0]), y, obj_solid);
 if _hit 
 	if _hit.solid_
 		velocity[0] *= -1;
