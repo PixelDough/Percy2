@@ -1,4 +1,7 @@
-
+var _nearest = instance_nearest(x, y, physics_object)
+if distance_to_object(_nearest) > 16 and object_index == obj_solid {
+	exit;
+}
 
 if solid_ {
 	if block_hit() and instance_exists(obj_player) {

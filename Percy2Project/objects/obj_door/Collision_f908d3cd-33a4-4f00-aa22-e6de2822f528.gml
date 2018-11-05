@@ -1,6 +1,17 @@
 
 if input.u_p {
-	var _other_door = instance_nearest_notme(obj_door);
-	other.x = _other_door.x;
-	other.y = _other_door.bbox_bottom;
+	global.player_door = target_door;
+	if target_room != room {
+		room_goto(target_room);
+	} else {
+		//var _other_door = instance_nearest_notme(obj_door);
+		var _player = other;
+		var _door = self;
+		with obj_door {
+			if target_door == _door.target_door and self != _door {
+				_player.x = self.x;
+				_player.y = self.y;
+			}
+		}
+	}
 }

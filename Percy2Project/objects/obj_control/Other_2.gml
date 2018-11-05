@@ -14,3 +14,5 @@ global.fontString = "!\"©%'()^+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ 
 global.font8px = font_add_sprite_ext(spr_font8px, global.fontString, false, -1)
 global.font16px = font_add_sprite_ext(spr_font16px, global.fontString, false, 0)
 draw_set_font(global.font8px);
+
+global.player_door = noone;
