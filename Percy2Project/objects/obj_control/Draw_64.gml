@@ -7,5 +7,6 @@ if instance_exists(obj_player) {
 		draw_sprite(collectable, sprite_get_index_time(collectable, global.time), 10, 10);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
+	draw_set_color(c_white);
 	draw_text(20, 10, fruits);
 }

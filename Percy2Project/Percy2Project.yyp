@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "3998ade5-7fa7-48f4-b75e-2fb706427af0",
+            "Value": {
+                "id": "fb785312-1ae2-4be3-b244-426efe8a6348",
+                "resourcePath": "scripts\\input_reset\\input_reset.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "39be9cc9-7e5f-4d6e-8a87-ef4dab97e0e6",
             "Value": {
                 "id": "cf96d551-52e1-4b2b-bf8a-991d121d64fc",
@@ -748,6 +756,14 @@
                 "id": "6c601a09-d804-458d-8dd0-9f2b3ea467ab",
                 "resourcePath": "scripts\/string_split\/string_split.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "498f44bb-697e-448f-b807-4b477f4efd66",
+            "Value": {
+                "id": "0342ba7c-2583-4aa9-b9ee-7c66197b2435",
+                "resourcePath": "objects\\obj_fade\\obj_fade.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1487,6 +1503,14 @@
             }
         },
         {
+            "Key": "9b4e3a40-1aab-419e-ab5b-19f8c05a8a8f",
+            "Value": {
+                "id": "171c0d13-2a55-49f7-8595-53bb1c8123fd",
+                "resourcePath": "scripts\\room_goto_circle\\room_goto_circle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9e192813-a04f-4eba-b260-628e75bcede4",
             "Value": {
                 "id": "041b7c79-b30a-48f6-bfb1-038dc9cbed96",
@@ -1866,17 +1890,6 @@
             "Key": "bc0b741c-4f7e-438b-a9d2-b0d56589e3fe",
             "Value": {
                 "id": "9147c4b6-2e6c-4a91-9900-07e1b7bd1ab9",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
                 "resourcePath": "objects\/obj_jingleBell_grav\/obj_jingleBell_grav.yy",
                 "resourceType": "GMObject"
             }
@@ -2622,7 +2635,9 @@
         "26e2d733-47df-4b55-985f-634ee62d3c9b",
         "bd41b3a3-acfa-43cd-8da1-7505f17f8c77",
         "8328f4e6-fc5b-4701-a223-490dcf59cbde",
-        "39be9cc9-7e5f-4d6e-8a87-ef4dab97e0e6"
+        "39be9cc9-7e5f-4d6e-8a87-ef4dab97e0e6",
+        "3998ade5-7fa7-48f4-b75e-2fb706427af0",
+        "9b4e3a40-1aab-419e-ab5b-19f8c05a8a8f"
     ],
     "tutorial": ""
 }

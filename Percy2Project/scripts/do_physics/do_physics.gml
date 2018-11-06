@@ -68,7 +68,8 @@ if !_y_hit_solid and !_do_jump and !grounded {
     velocity[1] = 0; //no need for gravity on ground
 	if( _do_jump ){
 	    velocity[1] = -sqrt(2 * _grav * _jump_speed);
-		//audio_play_sound(snd_jump, 100, false);
+		if self == obj_player
+			play_sound(snd_jump);
 	}
 }
 //we are on ground so we can check if we need to jump
