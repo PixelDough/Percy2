@@ -2,7 +2,7 @@
 if input.u_p {
 	global.player_door = target_door;
 	if target_room != room {
-		room_goto(target_room);
+		room_goto_circle(target_room);
 	} else {
 		//var _other_door = instance_nearest_notme(obj_door);
 		var _player = other;

@@ -1,5 +1,4 @@
 /// @description FADE IN EVENT
-persistent = false;
 with obj_camera {
 	if instance_exists(target_object) {
 		if circ_radius < camera_get_view_width(view_camera[0]) {

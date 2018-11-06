@@ -1,6 +1,6 @@
 
 var _pal = POWER;
-if POWER == 4 _pal=floor((global.time)/2 % POWER)
+if POWER == 4 _pal=floor(POWER+((global.time/5)%2))
 pal_swap_set(spr_pal_percy, _pal, false);
 draw_shadow(1)
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 100);

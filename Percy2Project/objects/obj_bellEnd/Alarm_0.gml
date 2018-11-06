@@ -1,0 +1,1 @@
+room_goto_circle(room+1)

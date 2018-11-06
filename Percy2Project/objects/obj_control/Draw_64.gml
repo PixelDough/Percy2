@@ -1,6 +1,7 @@
 //draw_text(0, 0, "FRUIT: ")
 //draw_sprite(spr_hud, 0, -1, -1)
 if instance_exists(obj_player) {
+	// Draw coin count
 	if collectable == spr_fruits 
 		draw_sprite(collectable, hud_fruit, 10, 10);
 	else
@@ -9,4 +10,10 @@ if instance_exists(obj_player) {
 	draw_set_valign(fa_middle);
 	draw_set_color(c_white);
 	draw_text(20, 10, fruits);
+	
+	// Top Text
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	draw_set_color(c_white);
+	//draw_text(camera_get_view_width(view_camera[0])/2, 1, "THIS IS SOME TEXT.");
 }
