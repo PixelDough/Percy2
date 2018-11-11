@@ -3,6 +3,10 @@
 //	exit;
 //}
 
+if object_index == obj_solid and distance_to_object(instance_nearest(x, y, physics_object)) > 64 {
+	exit;
+}
+
 if solid_ {
 	if block_hit() and instance_exists(obj_player) {
 		var _hit = true;
@@ -45,7 +49,7 @@ y += velocity[1];
 if solid_ {
 	var _x_hit = instance_place_plus(x, y, physics_object);
 	with _x_hit {
-		var _hit_kill = instance_place(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
+		var _hit_kill = instance_place_plus(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
 		if _hit_kill {
 			make_dead(self);
 			exit;

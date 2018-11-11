@@ -1,1 +1,1 @@
-instance_create_layer(mouse_x, mouse_y, "Instances", obj_wand);
+instance_create_depth(mouse_x, mouse_y, 200, obj_wand);

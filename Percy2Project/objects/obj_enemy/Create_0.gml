@@ -5,3 +5,7 @@
 event_inherited();
 
 velocity[0] = -0.5
+
+ACTION = 0;
+
+ENABLED = false;

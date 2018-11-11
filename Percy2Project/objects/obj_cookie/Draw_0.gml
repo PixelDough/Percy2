@@ -1,3 +1,4 @@
+event_inherited();
 if instance_exists(obj_player) {
 	if place_meeting(x, y-2, obj_player) and obj_player.y <= bbox_top {
 		draw_sprite(sprite_index, image_index, x+random_range(-(240-life)*0.01,(240-life)*0.01), y+random_range(-(240-life)*0.01,(240-life)*0.01))

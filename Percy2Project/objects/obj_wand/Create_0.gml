@@ -1,3 +1,4 @@
+event_inherited();
 
 POWER = POWERS.WAND;
 

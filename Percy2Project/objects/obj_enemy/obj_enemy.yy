@@ -5,16 +5,6 @@
     "name": "obj_enemy",
     "eventList": [
         {
-            "id": "f435f009-ef32-49a3-afc1-bcf7bfe313f1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 1,
-            "eventtype": 3,
-            "m_owner": "82737b83-c493-4e6f-876f-9fbbdf3d72e6"
-        },
-        {
             "id": "bdae06f4-8777-459d-acf0-9b38867c6547",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -22,6 +12,36 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
+            "m_owner": "82737b83-c493-4e6f-876f-9fbbdf3d72e6"
+        },
+        {
+            "id": "98d128fd-fdd7-459e-af1b-eb0e2bcc34a6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "82737b83-c493-4e6f-876f-9fbbdf3d72e6"
+        },
+        {
+            "id": "94803c64-b0fb-4b8b-921a-2ea424f464f8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "2c3e1cbe-e596-4cc5-a254-ad08902d72a1",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "82737b83-c493-4e6f-876f-9fbbdf3d72e6"
+        },
+        {
+            "id": "5f334b3e-2f88-41ab-959e-7925a4df345e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
             "m_owner": "82737b83-c493-4e6f-876f-9fbbdf3d72e6"
         }
     ],
@@ -36,7 +56,7 @@
             "value": "True"
         }
     ],
-    "parentObjectId": "64236aa0-0efb-440b-b93c-5ad7e0dfa7bb",
+    "parentObjectId": "8c9312bd-46c7-4333-9376-f2c359a3e57e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

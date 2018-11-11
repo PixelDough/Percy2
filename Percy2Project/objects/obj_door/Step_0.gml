@@ -1,2 +1,0 @@
-
-make_platform(obj_platform);

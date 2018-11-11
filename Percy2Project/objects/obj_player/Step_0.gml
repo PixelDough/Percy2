@@ -116,4 +116,7 @@ if _do_physics {
 
 percy_present();
 
-if bbox_top > room_height room_restart();
+if bbox_top > room_height {
+	instance_destroy();
+	room_goto_circle(room);
+}
