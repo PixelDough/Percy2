@@ -1,3 +1,3 @@
 with other {
-	collide(other.dir);
+	//collide(other.dir);
 }
