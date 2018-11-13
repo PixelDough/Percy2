@@ -17,3 +17,5 @@ dir = 1;
 if instance_exists(obj_player) dir = sign(x - obj_player.x);
 
 velocity = [0.5 * dir, 0];
+
+ENABLED = true;
