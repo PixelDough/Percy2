@@ -1,4 +1,5 @@
-y -= 256;
+start_y = ystart - 256
+y = start_y
 velocity = [0, 0]
 
 depth = -9999

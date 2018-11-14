@@ -7,5 +7,6 @@ for (var _i=0; _i<16; _i++) {
 }
 audio_play_sound(snd_powerup, 100, false);
 other.POWER = POWER;
+other.HEALTH = 1;
 //sleep((audio_sound_length(snd_powerup)/2)*1000)
 instance_deactivate_object(self);

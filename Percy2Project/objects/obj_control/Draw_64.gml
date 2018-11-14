@@ -1,5 +1,16 @@
 //draw_text(0, 0, "FRUIT: ")
 //draw_sprite(spr_hud, 0, -1, -1)
+if room == rm_title_3d {
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_set_color(c_white);
+	var _menu_x = obj_camera.width/2
+	var _menu_y = obj_camera.height/1.5
+	//draw_text(_menu_x, _menu_y, "NEW GAME");
+	//draw_text(_menu_x, _menu_y+12, "OPTIONS");
+	//draw_text(_menu_x, _menu_y+24, "QUIT");
+}
+
 if instance_exists(obj_player) {
 	// Draw coin count
 	if collectable == spr_fruits 

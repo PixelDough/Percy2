@@ -28,3 +28,5 @@ vertex_point_add(square, side_length, side_length, -1, 0, 0, -1, c_white, 1.0, 1
 vertex_end(square);
 
 yscale = 0.35
+
+SPINNING = true;

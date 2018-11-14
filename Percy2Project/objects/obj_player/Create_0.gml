@@ -20,6 +20,8 @@ enum POWERS {
 ACTION = PERCY.STAND;
 POWER = POWERS.NONE;
 
+HEALTH = 0;
+
 spd = 0.05;
 spd_mul = 1;
 

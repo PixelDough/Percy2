@@ -34,7 +34,18 @@ draw_surface_ext(_surf_final, x-(surface_get_width(_surf_final)/2), y-(surface_g
 surface_free(_surf);
 surface_free(_surf_final);
 
-image_angle-=0.5;
+layer_x(layer_get_id("Background"), -image_angle);
+if SPINNING {
+	image_angle-=0.5;
+} else {
+	//image_angle = angle_approach(image_angle, 90, 1);
+	if floor(image_angle)%90 != 0 {
+		input.enabled = false;
+	} else {
+		input.enabled = true;
+	}
+	image_angle = reach(image_angle, 90+(360*floor((image_angle+90)/360)), 2);
+}
 
 //vertex_submit(square, pr_trianglelist, sprite_get_texture(sprite_index, image_index));
 

@@ -1,3 +1,5 @@
+event_inherited();
+
 make_platform(obj_platform);
 
 if input.d_p {
