@@ -2807,6 +2807,14 @@
             }
         },
         {
+            "Key": "f998483e-90ff-4fe7-8e18-43bbb395e6e7",
+            "Value": {
+                "id": "9e3fc502-c148-4da3-a6f7-47d80fb20310",
+                "resourcePath": "sprites\\spr_hat\\spr_hat.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "faab1972-fae1-4e04-8420-e09eee36060e",
             "Value": {
                 "id": "608412f7-5b73-4db5-aeb5-43b53853074b",
