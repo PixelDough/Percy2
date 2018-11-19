@@ -1,4 +1,4 @@
-event_inherited()
+
 is_in_water = false;
 velocity = [0, 0]
 grav = 0.15;

@@ -97,11 +97,12 @@ for (var _i=0; _i<ds_list_size(_x_hit); _i++) {
 		}
 	}
 }
-ds_list_destroy(_y_hit)
+
 if _x_hit_solid {
 	if _x_hit.solid_ {
 		
 	}
 }
+ds_list_destroy(_x_hit)
 
 //x+=velocity[0];

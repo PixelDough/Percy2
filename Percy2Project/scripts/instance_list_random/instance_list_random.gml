@@ -23,4 +23,3 @@ with (obj)
 }
 ds_list_shuffle(list);
 return list;
-

@@ -9,14 +9,17 @@ var _object = argument2;
 var _hit_list = ds_list_create();
 instance_place_list(_x, _y, _object, _hit_list, true);
 for (var _i=0; _i<ds_list_size(_hit_list); _i++) {
-	if instance_exists(_hit_list[|_i]) {
-		if (object_is_ancestor(_hit_list[|_i].object_index, _object) or _hit_list[|_i].object_index == _object){
-			if variable_instance_exists(_hit_list[|_i], "solid_") {
-				if _hit_list[|_i].solid_ {
-					return _hit_list[|_i];
+	var _hit = _hit_list[|_i];
+	if instance_exists(_hit) {
+		if (object_is_ancestor(_hit.object_index, _object) or _hit.object_index == _object) {
+			if variable_instance_exists(_hit, "solid_") {
+				if _hit.solid_ {
+					ds_list_destroy(_hit_list);
+					return _hit;
 				}
 			} else {
-				return _hit_list[|_i];
+				ds_list_destroy(_hit_list);
+				return _hit;
 			}
 		}
 	}

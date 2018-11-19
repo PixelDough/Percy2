@@ -4,4 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
+ITEM = obj_mint;
+
 POWER = POWERS.ICE;

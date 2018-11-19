@@ -39,3 +39,7 @@ present = noone;
 grounded = true;
 grav = 0.15;
 current_room = instance_place(x, y, obj_room);
+
+//with obj_player {
+//	if id != other instance_destroy();
+//}

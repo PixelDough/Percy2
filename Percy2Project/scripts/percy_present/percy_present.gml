@@ -1,4 +1,4 @@
-var _target = instance_place(x, y+4, obj_solid);
+var _target = instance_place_plus(x, y+4, obj_solid);
 if !present {
 	if _target and input.d and input.action_two_pressed {
 		if _target.object_index == obj_solid || (object_is_ancestor(_target.object_index, obj_platform)) exit;

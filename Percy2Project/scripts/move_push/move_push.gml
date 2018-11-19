@@ -31,12 +31,12 @@ if solid_ {
 			//_pushable.y += y-yprevious;
 	
 			//if velocity[0] != 0 or velocity[1] != 0 {
-				_pushable.x += sign(x-xprevious);
-				_pushable.y += sign(y-yprevious);
+				_pushable.x += sign(velocity[0]);
+				_pushable.y += sign(velocity[1]);
 			//}
 		
 			with _pushable {
-				var _hit = instance_place_plus(x+sign(other.x-other.xprevious), y+sign(other.y-other.yprevious), obj_solid)
+				var _hit = instance_place_plus(x+sign(other.velocity[0]), y+sign(other.velocity[1]), obj_solid)
 				if _hit and _hit != other {
 					make_dead(self);
 					exit;
