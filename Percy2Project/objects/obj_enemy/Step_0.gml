@@ -1,7 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-// Inherit the parent event
 
 make_platform(obj_platform);
 grounded = instance_place_plus(x, y+1, obj_solid);

@@ -53,7 +53,7 @@ if solid_ {
 			solid_ = false;
 			exit;
 		}
-		var _hit_kill = instance_place_plus(x+sign(other.velocity[0]), y+sign(other.velocity[1]), obj_solid)
+		var _hit_kill = instance_place_plus(x+sign(other.velocity[0]), y+sign(other.velocity[1]), other)
 		if _hit_kill {
 			make_dead(self);
 			exit;

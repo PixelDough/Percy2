@@ -551,14 +551,6 @@
             }
         },
         {
-            "Key": "2f60303f-4a2d-4453-b7f7-5d3e04775a1b",
-            "Value": {
-                "id": "a7f572b0-fad2-4dc8-8a16-51c2bb33f677",
-                "resourcePath": "rooms\/level_1\/level_1.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "3008aa4d-4776-4575-9cfa-3761325f795e",
             "Value": {
                 "id": "9f0e6691-2063-476d-aa8a-fb49cb42f43d",
@@ -927,6 +919,14 @@
             }
         },
         {
+            "Key": "4fc51ef8-a7af-4864-9bdf-f1402f6bbafc",
+            "Value": {
+                "id": "662da131-cf30-451b-b7d9-14c365427140",
+                "resourcePath": "sprites\\spr_player_start\\spr_player_start.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "500be301-6989-435e-8763-57e329e9f7a9",
             "Value": {
                 "id": "1f92ddcf-6670-4da4-aa37-80634db78091",
@@ -1291,6 +1291,14 @@
             "Value": {
                 "id": "a2d43ef7-b2d3-4a35-a284-b5ada3670ad4",
                 "resourcePath": "scripts\/draw_sprite_shadow\/draw_sprite_shadow.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6af29168-6531-41a2-a42f-3a885f0be9cf",
+            "Value": {
+                "id": "7a5fd40c-87f4-4a1e-b987-6d10b5d2a67d",
+                "resourcePath": "scripts\\level_load\\level_load.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1867,6 +1875,14 @@
             "Value": {
                 "id": "40882d68-8c5f-43da-b883-8a0f260a9dc9",
                 "resourcePath": "objects\/obj_platformBlock\/obj_platformBlock.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a5fdb385-65dd-495f-950e-79578c49e8f1",
+            "Value": {
+                "id": "a547e05f-632e-42b9-9699-a2d3720fa229",
+                "resourcePath": "objects\\obj_player_start\\obj_player_start.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3022,7 +3038,8 @@
         "146f82bb-ff86-447f-960a-05b4c90b1433",
         "d7f5bcbc-48a4-465b-9927-c658db520d08",
         "63db3388-7c8b-4411-b911-977c98361a4a",
-        "171a849d-6958-4aea-b845-db5d5513c50a"
+        "171a849d-6958-4aea-b845-db5d5513c50a",
+        "6af29168-6531-41a2-a42f-3a885f0be9cf"
     ],
     "tutorial": ""
 }

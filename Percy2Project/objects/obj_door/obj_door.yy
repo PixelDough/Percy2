@@ -72,9 +72,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 512,
-            "value": "room",
+            "value": "0",
             "varName": "target_room",
-            "varType": 5
+            "varType": 1
         },
         {
             "id": "7b102751-c14a-4a2c-8e11-76cc225c16cf",
@@ -89,6 +89,20 @@
             "value": "-1",
             "varName": "target_door",
             "varType": 1
+        },
+        {
+            "id": "7d0c865f-94d0-41f0-bbf5-ced12870cc15",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "hidden",
+            "varType": 3
         }
     ],
     "solid": false,

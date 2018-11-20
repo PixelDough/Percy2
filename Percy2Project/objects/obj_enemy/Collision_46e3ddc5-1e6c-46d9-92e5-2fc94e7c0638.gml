@@ -8,7 +8,7 @@ if ENABLED {
 		}
 		audio_play_sound(snd_pop, 100, false);
 		if other.POWER == POWERS.ICE {
-			var _ice = instance_create_layer(round(bbox_left/16)*16, round(bbox_top/16)*16, layer, obj_IceBlock);
+			var _ice = instance_create_layer(round(bbox_left/16)*16, round(bbox_top/16)*16, "Instances", obj_IceBlock);
 			other.y = _ice.bbox_top
 			instance_destroy();
 		} else {

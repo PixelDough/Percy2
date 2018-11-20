@@ -15,6 +15,10 @@ if input.d_p {
 
 current_room = instance_place(x, y, obj_room);
 
+if !input.enabled {
+	exit;
+}
+
 var _x_input = input.r - input.l;
 var _crouch = input.d or (ACTION == PERCY.CROUCH and instance_place_plus(x, bbox_top, obj_solid));
 
@@ -120,5 +124,16 @@ percy_present();
 
 if bbox_top > room_height {
 	instance_destroy();
-	room_goto_circle(room);
+	//var _level = obj_control.LEVELS[obj_control.LEVEL];
+	//for (var _i=0; _i < array_length_1d(_level); _i++) {
+	//	if _level[_i] == room {
+	//		room_persistent = false;
+	//	} else {
+	//		room_set_persistent(_level[_i], false);
+	//	}
+	//}
+	with obj_control {
+		CURRENT_LEVEL = level_load(LEVELS, LEVEL);
+		room_goto_circle(CURRENT_LEVEL[ROOM]);
+	}
 }
