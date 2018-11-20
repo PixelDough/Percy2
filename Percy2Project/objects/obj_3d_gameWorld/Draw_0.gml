@@ -35,7 +35,7 @@ surface_free(_surf);
 surface_free(_surf_final);
 
 layer_x(layer_get_id("Background"), -image_angle);
-if SPINNING {
+if SPINNING or !SPINNING {
 	image_angle-=0.5;
 } else {
 	//image_angle = angle_approach(image_angle, 90, 1);

@@ -14,4 +14,4 @@ LEVEL = 0;
 ROOM = 0;
 
 CURRENT_LEVEL = level_load(LEVELS, LEVEL);
-room_goto_circle(CURRENT_LEVEL[ROOM]);
+//room_goto_circle(CURRENT_LEVEL[ROOM]);
