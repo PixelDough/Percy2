@@ -1,4 +1,4 @@
-if room <= parent room_goto_next();
+if room == setup room_goto_circle(rm_title_3d, true);
 with obj_solid {
 	if object_index == obj_solid {
 		instance_destroy();
@@ -8,8 +8,7 @@ tiles_to_solid("Collisions");
 global.time = 1;
 
 if room == rm_title_3d {
-	var _fade = instance_create_layer(0, 0, "META", obj_fade);
-	_fade.ACTION = CIRC_FADE.IN;
+	audio_play_sound(mus_FrostyFrolicTitle, 100, true);
 }
 
 if instance_exists(obj_door) or instance_exists(obj_player_start) {

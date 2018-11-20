@@ -9,3 +9,5 @@ enum CIRC_FADE {
 	IN
 }
 ACTION = CIRC_FADE.OUT;
+
+song = noone;

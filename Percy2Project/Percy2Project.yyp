@@ -71,14 +71,6 @@
             }
         },
         {
-            "Key": "0621f686-299c-42eb-a9b8-95f85ec6df66",
-            "Value": {
-                "id": "ad6dbfc0-d7b3-45a9-a0a9-724037b4999b",
-                "resourcePath": "views\\874f81e1-b9ac-4c73-b36a-95bb56e1448f-room.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "066e0233-d8f2-4512-a887-a07ac8f68f9f",
             "Value": {
                 "id": "ca19155b-1a18-462f-8bee-be6597654341",
@@ -732,6 +724,14 @@
                 "id": "9258c777-69e8-4dad-a650-216d7374a5ad",
                 "resourcePath": "objects\/obj_block_strong\/obj_block_strong.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3bdf4759-bc84-4621-aa59-7622298a0569",
+            "Value": {
+                "id": "1b056c5e-618d-44ce-a572-337107906cd6",
+                "resourcePath": "sounds\\mus_FrostyFrolicTitle\\mus_FrostyFrolicTitle.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1503,6 +1503,14 @@
             }
         },
         {
+            "Key": "814eb179-6697-4efa-8dff-56309364ef0b",
+            "Value": {
+                "id": "320d478f-1f7a-4562-9814-0b2494b260b3",
+                "resourcePath": "sounds\\snd_fadeOut\\snd_fadeOut.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "816d9b2e-e9ed-465c-818d-ad8077cfbcd6",
             "Value": {
                 "id": "d0d2731e-c8b6-4d24-b707-35a2b3c7cfb1",
@@ -2068,6 +2076,14 @@
                 "id": "5035bd71-5d39-49ce-ace7-f55db86eda7a",
                 "resourcePath": "sprites\/spr_cookie\/spr_cookie.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b2dfec95-619b-4778-aa08-3d6ec279409c",
+            "Value": {
+                "id": "dfcd6d62-0fd4-4971-8ba7-b6dacb37d5bb",
+                "resourcePath": "sounds\\snd_fadeIn\\snd_fadeIn.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2868,6 +2884,14 @@
                 "id": "acb5a127-2ce8-4144-8ee1-cb9c025d1d8c",
                 "resourcePath": "views\/f2f1e86f-33e3-48c7-8f17-3dcf8b91780b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f351ee8c-29fa-4f92-ad32-a8c605a2859b",
+            "Value": {
+                "id": "0ca99d66-a6c8-4829-a166-35d69fed3abe",
+                "resourcePath": "sprites\\spr_menu_new\\spr_menu_new.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
