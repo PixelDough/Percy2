@@ -26,6 +26,8 @@ with obj_camera {
 		input.enabled = false;
 		
 		if circ_radius < 1 {
+			audio_stop_all();
+			play_sound(snd_fadeIn);
 			other.ACTION = CIRC_FADE.IN;
 			circ_radius = 1;
 			if !room_exists(other.target) other.target = room;

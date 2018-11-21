@@ -25,6 +25,10 @@ with obj_camera {
 	
 			input.enabled = false;
 		} else {
+			if !audio_is_playing(other.music) {
+				audio_stop_all();
+				audio_play_sound(other.music, 100, true);
+			}
 			input.enabled = true;
 			instance_destroy(other);
 		}

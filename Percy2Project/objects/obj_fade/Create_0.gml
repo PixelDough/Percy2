@@ -10,4 +10,4 @@ enum CIRC_FADE {
 }
 ACTION = CIRC_FADE.OUT;
 
-song = noone;
+music = mus_FrostyFrolicTitle;

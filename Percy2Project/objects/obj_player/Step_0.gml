@@ -1,5 +1,9 @@
 event_inherited();
 
+if !instance_exists(obj_player_start) and !instance_exists(obj_door) {
+	instance_destroy();
+}
+
 make_platform(obj_platform);
 
 if input.d_p {
@@ -26,6 +30,9 @@ water_to_ice(POWER == POWERS.ICE);
 
 var _water_hit = instance_place(x, y, obj_zone_water)
 if _water_hit {
+	if global.time % 30 == 0 {
+		instance_create_depth(x, bbox_top, depth+1, obj_part_bubble);
+	}
 	if !is_in_water {
 		is_in_water = true;
 		if bbox_top < _water_hit.bbox_top {
@@ -134,6 +141,6 @@ if bbox_top > room_height {
 	//}
 	with obj_control {
 		CURRENT_LEVEL = level_load(LEVELS, LEVEL);
-		room_goto_circle(CURRENT_LEVEL[ROOM], false);
+		room_goto_circle(CURRENT_LEVEL[ROOM], false, mus_FrostyFrolic);
 	}
 }

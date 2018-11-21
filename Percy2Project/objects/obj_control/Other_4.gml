@@ -1,4 +1,4 @@
-if room == setup room_goto_circle(rm_title_3d, true);
+if room == setup room_goto_circle(rm_title_3d, true, mus_FrostyFrolicTitle);
 with obj_solid {
 	if object_index == obj_solid {
 		instance_destroy();
@@ -8,7 +8,8 @@ tiles_to_solid("Collisions");
 global.time = 1;
 
 if room == rm_title_3d {
-	audio_play_sound(mus_FrostyFrolicTitle, 100, true);
+	obj_camera.x = room_width/2;
+	obj_camera.y = room_height/2;
 }
 
 if instance_exists(obj_door) or instance_exists(obj_player_start) {

@@ -22,9 +22,10 @@ if instance_exists(obj_player) {
 	draw_set_color(c_white);
 	draw_text(20, 10, fruits);
 	
-	// Top Text
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_top);
+	// Draw lives
+	draw_set_halign(fa_right);
+	draw_set_valign(fa_middle);
 	draw_set_color(c_white);
-	//draw_text(camera_get_view_width(view_camera[0])/2, 1, "THIS IS SOME TEXT.");
+	draw_sprite(spr_hotCoco, sprite_get_index_time(spr_hotCoco, global.time), camera_get_view_width(view_camera[0])-10, 10);
+	draw_text(camera_get_view_width(view_camera[0])-10-10, 10, "5");
 }
