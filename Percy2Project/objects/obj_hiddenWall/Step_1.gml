@@ -1,2 +1,2 @@
 
-visible_last = visible;
+visible_last = visible_;
