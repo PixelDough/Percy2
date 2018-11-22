@@ -35,12 +35,16 @@ var _mode = MODES[MODE];
 // NEW GAME STUFF
 if SEL == MENU_MAIN.NEW {
 	
-	draw_text(room_width/2, 64, "< " + _mode[0] + " >");
-	draw_text(room_width/2, 80, _mode[1]);
+	draw_text(room_width/2, 64, "< " + _mode[0] + " >" + "\n\n" + _mode[1]);
 	
 	MODE += (input.r_p - input.l_p);
 	if MODE < 0 MODE = array_length_1d(MODES)-1;
 	if MODE > array_length_1d(MODES)-1 MODE = 0;
+	
+	if input.action_one_pressed {
+		new_game(MODE);
+		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
+	}
 	
 }
 

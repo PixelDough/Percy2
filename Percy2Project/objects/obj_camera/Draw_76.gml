@@ -43,23 +43,25 @@ if room == rm_title_3d {
 
 camera_set_view_pos(view_camera[0], x - width/2, y - height/2);
 
-if layer_exists("Parallax1") {
-	layer_x("Parallax1", x*0.9);
-	//layer_y("Mountains", y - height/2);
-	//layer_y("Mountains", y-(room_height-sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Mountains"))))));
-	layer_y("Parallax1", y*0.9);
-}
+if instance_exists(obj_player) {
+	if layer_exists("Parallax1") {
+		layer_x("Parallax1", x*0.9);
+		//layer_y("Mountains", y - height/2);
+		//layer_y("Mountains", y-(room_height-sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Mountains"))))));
+		layer_y("Parallax1", y*0.9);
+	}
 
-if layer_exists("Parallax2") {
-	layer_x("Parallax2", x/2);
-	//layer_y("Mountains", y - height/2);
-	//layer_y("Mountains", y-(room_height-sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Mountains"))))));
-	layer_y("Parallax2", (room_height-240)-((room_height-240)-camera_get_view_y(view_camera[0]))*0.5);
-}
-if layer_exists("Parallax3") {
-	layer_x("Parallax3", x*0.5);
-	//layer_y("Mountains", y - height/2);
-	layer_y("Parallax3", 0+(y-height/2)*0.85);
+	if layer_exists("Parallax2") {
+		layer_x("Parallax2", x/2);
+		//layer_y("Mountains", y - height/2);
+		//layer_y("Mountains", y-(room_height-sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Mountains"))))));
+		layer_y("Parallax2", (room_height-240)-((room_height-240)-camera_get_view_y(view_camera[0]))*0.5);
+	}
+	if layer_exists("Parallax3") {
+		layer_x("Parallax3", x*0.5);
+		//layer_y("Mountains", y - height/2);
+		layer_y("Parallax3", 0+(y-height/2)*0.85);
+	}
 }
 
 //if instance_exists(obj_player) {

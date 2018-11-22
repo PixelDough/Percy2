@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "09471d8c-856b-4f5d-a528-a2659c450a73",
+            "Value": {
+                "id": "b51a2135-fef4-418f-a441-37ba216fc77d",
+                "resourcePath": "rooms\\rm_levelSelect\\rm_levelSelect.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "0ac59313-0faa-4348-beac-7b8d9834d7d2",
             "Value": {
                 "id": "bc3e609c-f6f2-4d56-81a3-db94103ebab0",
@@ -299,6 +307,14 @@
             "Value": {
                 "id": "4d19c80b-7d68-4fd7-8477-38a225d7cf24",
                 "resourcePath": "scripts\/truestate_cleanup\/truestate_cleanup.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "198540d8-4120-4b30-9f88-fe361607e1d1",
+            "Value": {
+                "id": "8dfee491-456e-447b-b32a-9d6659e2bdea",
+                "resourcePath": "scripts\\new_game\\new_game.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1063,6 +1079,14 @@
             }
         },
         {
+            "Key": "584abdeb-4d00-441b-916c-abc2be84a56d",
+            "Value": {
+                "id": "0af99843-88fa-4a9e-94a4-eca6f8271217",
+                "resourcePath": "objects\\level_select\\level_select.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "58d8fef1-5804-4ae4-8a9e-efcd896a7b6f",
             "Value": {
                 "id": "5bd4443e-ff9a-4b82-9eb3-154b8bba4bbf",
@@ -1615,6 +1639,14 @@
             }
         },
         {
+            "Key": "86ab151d-3aef-4ab6-bdf2-e45047217d26",
+            "Value": {
+                "id": "98f12656-5958-4fd2-8d60-7e7b498f2c29",
+                "resourcePath": "sprites\\spr_menu_levels\\spr_menu_levels.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "86d30694-de39-4336-bc56-d194344a8ffa",
             "Value": {
                 "id": "f1250877-9e14-45fc-86b3-ec03c537b159",
@@ -2079,6 +2111,14 @@
             }
         },
         {
+            "Key": "b0be8813-21f4-48f1-a21f-845bae3f8fe9",
+            "Value": {
+                "id": "b0c1cf07-8c6b-4118-b85c-4878fcd1f39c",
+                "resourcePath": "sprites\\spr_bg_plaid\\spr_bg_plaid.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b110ab51-fe71-4241-80ba-22a208545044",
             "Value": {
                 "id": "c50824ed-7af3-4d94-af55-704da3537aaf",
@@ -2380,6 +2420,14 @@
                 "id": "e9bbf523-5cb0-4ffc-a1af-6d355db162f6",
                 "resourcePath": "tilesets\/ts_bg_gingerbreadTown\/ts_bg_gingerbreadTown.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "c61d0d87-c301-48bc-97d3-e5258ce9e0e2",
+            "Value": {
+                "id": "9720763c-8bf0-4b16-b23a-bdc0e722ec8a",
+                "resourcePath": "scripts\\load_game\\load_game.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2831,6 +2879,14 @@
             }
         },
         {
+            "Key": "e86c9389-79dc-4dee-a199-94e203d5e92d",
+            "Value": {
+                "id": "bee57bd4-a27d-4f79-af09-aa72229f257c",
+                "resourcePath": "views\\e86c9389-79dc-4dee-a199-94e203d5e92d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e8d7b7a4-db28-4a92-b575-0c0eac206d75",
             "Value": {
                 "id": "ccdb7daa-09a3-4caf-82ae-4bebd8b0c2f4",
@@ -3167,7 +3223,9 @@
         "d7f5bcbc-48a4-465b-9927-c658db520d08",
         "63db3388-7c8b-4411-b911-977c98361a4a",
         "171a849d-6958-4aea-b845-db5d5513c50a",
-        "6af29168-6531-41a2-a42f-3a885f0be9cf"
+        "6af29168-6531-41a2-a42f-3a885f0be9cf",
+        "198540d8-4120-4b30-9f88-fe361607e1d1",
+        "c61d0d87-c301-48bc-97d3-e5258ce9e0e2"
     ],
     "tutorial": ""
 }

@@ -16,5 +16,6 @@ if ENABLED {
 		audio_play_sound(snd_pop, 100, false);
 	} else {
 		make_dead(other);
+		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
 	}
 }

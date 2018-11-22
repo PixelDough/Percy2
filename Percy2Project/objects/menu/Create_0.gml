@@ -18,12 +18,14 @@ BUTTONS[MENU_MAIN.EXIT] =	[spr_menu_exit,	0,	"Leaving so soon?"];
 
 
 enum MENU_MODES { 
-	GLOBAL,
+	CLASSIC,
 	LOCAL,
 	FREE
 }
 
 MODES = [];
-MODES[MENU_MODES.GLOBAL] =	["GLOBAL",		"BASED ON DECEMBER 1ST"];
-MODES[MENU_MODES.LOCAL] =	["LOCAL",		"BASED ON TODAY - " + string(date_get_month(date_current_datetime())) + "/" + string(date_get_day(date_current_datetime()))];
+MODES[MENU_MODES.CLASSIC] =	["CLASSIC",		"BASED ON THE 1ST OF THE MONTH"];
+MODES[MENU_MODES.LOCAL] =	["LOCAL",		"BASED ON TODAY - " + string(current_month) + "/" + string(current_day)];
 MODES[MENU_MODES.FREE] =	["FREE PLAY",	"PLAY ANY COMPLETED LEVEL"];
+
+load_game();
