@@ -87,7 +87,7 @@ velocity[0] = clamp(velocity[0] + _x_input*0.05, -2*spd_mul, 2*spd_mul);
 var _no_input = _x_input == 0 and grounded;
 var _turn = _x_input == -sign(velocity[0]) && !_no_input;
 if (_no_input || _turn) and !(_crouch and abs(velocity[0]) >= 3) {
-	velocity[0] = lerp(velocity[0], 0, 0.15 / (_crouch * 2 + 1));
+	velocity[0] = lerp(velocity[0], 0, 0.15 / (_crouch * 2 + 1) / (!grounded * 3 + 1));
 	if grounded and !_crouch {
 		if _no_input {
 			change_action(PERCY.STAND, true);
@@ -131,16 +131,8 @@ percy_present();
 
 if bbox_top > room_height {
 	instance_destroy();
-	//var _level = obj_control.LEVELS[obj_control.LEVEL];
-	//for (var _i=0; _i < array_length_1d(_level); _i++) {
-	//	if _level[_i] == room {
-	//		room_persistent = false;
-	//	} else {
-	//		room_set_persistent(_level[_i], false);
-	//	}
-	//}
+	
 	with obj_control {
-		CURRENT_LEVEL = level_load(LEVELS, LEVEL);
-		room_goto_circle(CURRENT_LEVEL[ROOM], false, mus_FrostyFrolic);
+		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
 	}
 }

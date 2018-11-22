@@ -48,6 +48,9 @@ if SEL == MENU_MAIN.NEW {
 	
 }
 
-
+var _SEL_last = SEL;
 SEL = clamp(SEL + (input.d_p - input.u_p), 0, array_length_1d(BUTTONS)-1);
-
+if SEL != _SEL_last {
+	var _snd = play_sound(snd_select1);
+	audio_sound_pitch(_snd, 1+(SEL/10))
+}

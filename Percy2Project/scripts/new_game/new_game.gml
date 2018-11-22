@@ -14,7 +14,7 @@ switch _gameMode {
 		break;
 	
 	case MENU_MODES.LOCAL:
-		_date = _date;
+		_date = _date-1;
 		break;
 	
 	case MENU_MODES.FREE:

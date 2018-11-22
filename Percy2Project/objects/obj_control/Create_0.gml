@@ -9,6 +9,7 @@ global.player_door = -1
 
 LEVELS = [];
 LEVELS[0] = [level1, level1_sub1];
+LEVELS[1] = [level2, level2_sub1];
 
 LEVEL = 0;
 ROOM = 0;
