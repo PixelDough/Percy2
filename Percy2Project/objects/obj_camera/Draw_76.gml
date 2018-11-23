@@ -15,8 +15,8 @@ if room == rm_title_3d {
 		if(target_object.x > target_x + x_buff || target_object.x < target_x - x_buff) {
 			target_x = target_object.x - (x_buff * sign(target_object.x - target_x));
 		}
-		if(target_object.y > target_y + y_buff || target_object.y < target_y - y_buff) {
-			target_y = target_object.y - (y_buff * sign(target_object.y - target_y));
+		if(target_object.y-target_object.sprite_yoffset > target_y + y_buff || target_object.y-target_object.sprite_yoffset < target_y - y_buff) {
+			target_y = target_object.y-target_object.sprite_yoffset - (y_buff * sign(target_object.y-target_object.sprite_yoffset - target_y));
 		}
 	} else if target_object != obj_player {
 	

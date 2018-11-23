@@ -130,9 +130,5 @@ if _do_physics {
 percy_present();
 
 if bbox_top > room_height {
-	instance_destroy();
-	
-	with obj_control {
-		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
-	}
+	event_user(DIE);
 }

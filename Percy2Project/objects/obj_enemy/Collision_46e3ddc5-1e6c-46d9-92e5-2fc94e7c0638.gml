@@ -16,6 +16,7 @@ if other.velocity[1] > 0 or other.y+other.velocity[1] <= bbox_top+4 {
 	}
 	audio_play_sound(snd_pop, 100, false);
 } else {
-	make_dead(other);
-	room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
+	with obj_player {
+		event_user(DIE);
+	}
 }

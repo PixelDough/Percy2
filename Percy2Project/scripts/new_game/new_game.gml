@@ -14,7 +14,7 @@ switch _gameMode {
 		break;
 	
 	case MENU_MODES.LOCAL:
-		_date = _date-1;
+		_date = _date;
 		break;
 	
 	case MENU_MODES.FREE:
@@ -23,9 +23,30 @@ switch _gameMode {
 	
 }
 
-ini_write_real("Info", "Mode", _gameMode);
-ini_write_real("Info", "StartDate", _date);
+if _gameMode != MENU_MODES.FREE {
+	ini_write_real("Info", "Mode", _gameMode);
+	ini_write_real("Info", "StartDate", _date);
+} else {
+	global.saveGame_mode = _gameMode;
+	global.saveGame_date = _date;
+}
+
+
+level_create(0, [level1, level1_sub1], false, false, false);
+level_create(1, [level2, level2_sub1], false, false, false);
+
+ini_write_string("Levels", "ds_grid", ds_grid_write(global.levels));
+
 
 ini_close();
 
-load_game();
+
+//global.level_num = 0;
+//global.level_room = 0;
+
+//global.level_rooms = level_load(global.levels[# global.level_num, 0]);
+
+
+if _gameMode != MENU_MODES.FREE {
+	load_game();
+}

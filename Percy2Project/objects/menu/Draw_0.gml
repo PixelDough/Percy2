@@ -48,6 +48,21 @@ if SEL == MENU_MAIN.NEW {
 	
 }
 
+if SEL == MENU_MAIN.PLAY {
+	
+	var _date_string = string("STARTED ON: " + string(date_get_month(global.saveGame_date)) + "/" + string(date_get_day(global.saveGame_date)));
+	
+	if date_current_datetime() - global.saveGame_date > 365
+		_date_string = "STARTED OVER A YEAR AGO";
+	
+	draw_text(room_width/2, 64, _date_string);
+	
+	if input.action_one_pressed {
+		load_game();
+		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
+	}
+}
+
 var _SEL_last = SEL;
 SEL = clamp(SEL + (input.d_p - input.u_p), 0, array_length_1d(BUTTONS)-1);
 if SEL != _SEL_last {

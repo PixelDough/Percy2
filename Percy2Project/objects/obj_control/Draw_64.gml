@@ -22,10 +22,16 @@ if instance_exists(obj_player) {
 	draw_set_color(c_white);
 	draw_text(20, 10, fruits);
 	
-	// Draw lives
+	// Draw Coco
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_middle);
 	draw_set_color(c_white);
-	draw_sprite(spr_hotCoco, sprite_get_index_time(spr_hotCoco, global.time), camera_get_view_width(view_camera[0])-10, 10);
-	draw_text(camera_get_view_width(view_camera[0])-10-10, 10, "5");
+	
+	draw_sprite(spr_hotCoco_dark, sprite_get_index_time(spr_hotCoco, global.time), camera_get_view_width(view_camera[0])-10, 10);
+	
+	if global.levels[# global.level_num, 2] {
+		draw_sprite(spr_hotCoco, sprite_get_index_time(spr_hotCoco, global.time), camera_get_view_width(view_camera[0])-10, 10);
+	}
+	
+	//draw_text(camera_get_view_width(view_camera[0])-10-10, 10, "5");
 }

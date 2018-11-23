@@ -15,6 +15,8 @@ grounded = true;
 grav = 0.15;
 current_room = instance_place(x, y, obj_room);
 
+if sprite_index == spr_percy_in sprite_index = spr_percy_out;
+
 //with obj_player {
 //	if id != other instance_destroy();
 //}

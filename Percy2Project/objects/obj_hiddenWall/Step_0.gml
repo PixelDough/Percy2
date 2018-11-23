@@ -1,14 +1,15 @@
 
-visible_ = true;
+visible_last = visible_
 
 if place_meeting(x, y, obj_player) {
 	visible_ = false 
 }
 
-if visible_ = false {
-	depth = layer_get_depth(layer_get_id("Instances")) + 1;
-	image_index = 1;
-} else {
+if visible_ or (!visible_ and visible_timer < 30 and (global.time/2)%2==0) {
 	depth = layer_get_depth(layer_get_id("Collisions")) - 1;
 	image_index = 0;
+} else {
+	depth = layer_get_depth(layer_get_id("Instances")) + 1;
+	image_index = 1;
+	visible_timer+=2;
 }

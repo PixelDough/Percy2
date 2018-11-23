@@ -8,6 +8,7 @@ tiles_to_solid("Collisions");
 global.time = 1;
 
 if room == rm_title_3d {
+	load_game();
 	obj_camera.x = room_width/2;
 	obj_camera.y = room_height/2;
 }
@@ -26,7 +27,7 @@ if instance_exists(obj_door) or instance_exists(obj_player_start) {
 			with obj_player_start {
 				if instance_exists(obj_player) {
 					obj_player.x = x+(bbox_right-bbox_left)/2;
-					obj_player.y = bbox_bottom;
+					obj_player.y = bbox_bottom+1;
 				}
 			}
 		}
@@ -34,7 +35,7 @@ if instance_exists(obj_door) or instance_exists(obj_player_start) {
 		with obj_player_start {
 			var _player = instance_create_layer(x, y, "Instances", obj_player);
 			_player.x = x+(bbox_right-bbox_left)/2;
-			_player.y = bbox_bottom;
+			_player.y = bbox_bottom+1;
 		}
 	}
 }

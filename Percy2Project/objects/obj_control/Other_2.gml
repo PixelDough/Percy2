@@ -17,5 +17,16 @@ draw_set_font(global.font8px);
 
 global.player_door = noone;
 
+global.level_num = 0;
+global.level_room = 0;
+
+global.level_rooms = [];
+
 global.saveGame_mode = 0;
 global.saveGame_date = date_current_datetime();
+
+global.levels = ds_grid_create(24, 4);
+
+load_game();
+
+#macro DIE 15

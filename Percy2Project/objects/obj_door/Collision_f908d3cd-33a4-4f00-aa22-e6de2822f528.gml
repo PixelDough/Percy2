@@ -1,9 +1,12 @@
 if hidden exit;
 
 if input.u_p {
+	other.x = x;
+	other.y = y;
+	other.sprite_index = spr_percy_in;
 	global.player_door = target_door;
-	if room != obj_control.CURRENT_LEVEL[target_room] {
-		room_goto_circle(obj_control.CURRENT_LEVEL[target_room], false, mus_FrostyFrolic);
+	if room != global.level_rooms[target_room] {
+		room_goto_circle(global.level_rooms[target_room], false, mus_FrostyFrolic);
 	} else {
 		//var _other_door = instance_nearest_notme(obj_door);
 		var _player = other;
