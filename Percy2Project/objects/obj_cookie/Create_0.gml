@@ -4,4 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-life = 240;
+active = true;
+
+image_speed = 0;

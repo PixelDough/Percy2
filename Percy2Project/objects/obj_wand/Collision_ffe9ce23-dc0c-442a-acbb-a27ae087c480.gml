@@ -6,6 +6,6 @@ for (var _i=0; _i<16; _i++) {
 	_part.sprite_index = spr_particle_poof;
 }
 audio_play_sound(snd_powerup, 100, false);
-other.POWER = POWER;
+other.WAND_TIME = 600
 //sleep((audio_sound_length(snd_powerup)/2)*1000)
 instance_deactivate_object(self);

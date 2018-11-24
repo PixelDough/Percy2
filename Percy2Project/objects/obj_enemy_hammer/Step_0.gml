@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.paused exit;
 if velocity[0] != 0 {
 	image_xscale = sign(velocity[0]);
 }

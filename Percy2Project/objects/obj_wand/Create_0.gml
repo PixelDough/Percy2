@@ -1,7 +1,5 @@
 event_inherited();
 
-POWER = POWERS.WAND;
-
 
 spd = 0.05;
 spd_mul = 1;

@@ -14,7 +14,9 @@ for (var _i=0; _i<array_length_1d(BUTTONS); _i++) {
 	gpu_set_fog(true, c_black, 0, 1)
 	draw_sprite(_button[0], 0, _x+4+_button[1], (room_height*((1+_i)/4))+4);
 	gpu_set_fog(false, c_black, 0, 1)
-
+	
+	if SEL == _i draw_sprite_outlined(_button[0], 0, _x+_button[1], room_height*((1+_i)/4), 1, 1, 0, c_black, $20bcfa);
+	
 	draw_sprite(_button[0], 0, _x+_button[1], room_height*((1+_i)/4));
 	
 	// Draw text

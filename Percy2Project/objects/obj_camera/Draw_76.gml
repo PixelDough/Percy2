@@ -55,7 +55,8 @@ if instance_exists(obj_player) {
 		layer_x("Parallax2", x/2);
 		//layer_y("Mountains", y - height/2);
 		//layer_y("Mountains", y-(room_height-sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Mountains"))))));
-		layer_y("Parallax2", (room_height-240)-((room_height-240)-camera_get_view_y(view_camera[0]))*0.5);
+		var _layer_height = sprite_get_height(layer_background_get_sprite(layer_background_get_id(layer_get_id("Parallax2"))))
+		layer_y("Parallax2", (room_height-_layer_height)-((room_height-_layer_height)-camera_get_view_y(view_camera[0]))*0.5);
 	}
 	if layer_exists("Parallax3") {
 		layer_x("Parallax3", x*0.5);

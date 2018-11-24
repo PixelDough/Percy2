@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "120bf9ad-53df-4309-9881-b0515271194d",
+            "Value": {
+                "id": "474fd192-68c9-4a42-b704-4b66c35f751a",
+                "resourcePath": "sprites\\spr_paused\\spr_paused.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "13308880-01a8-4095-9cfb-7c57da4d01d3",
             "Value": {
                 "id": "dfaea1c8-87de-43b1-89f9-90e737346353",
@@ -842,7 +850,7 @@
             "Key": "3f7964f4-cf33-42ca-8c2d-ff6efd0956d7",
             "Value": {
                 "id": "a682b2f0-da7b-4eec-b73d-578e45e85805",
-                "resourcePath": "rooms\/rm_gingerbread_town\/rm_gingerbread_town.yy",
+                "resourcePath": "rooms\\level7_source\\level7_source.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1612,6 +1620,14 @@
                 "id": "9b491702-d288-4612-99e5-e6b9757b2fc7",
                 "resourcePath": "sprites\\spr_enemy_fire\\spr_enemy_fire.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7dbd10fc-ffc9-4497-aa01-1991e952a10e",
+            "Value": {
+                "id": "fee9a3d7-49ff-451a-b48c-0e33b8a22ad1",
+                "resourcePath": "rooms\\level7\\level7.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2524,6 +2540,14 @@
                 "id": "e9bbf523-5cb0-4ffc-a1af-6d355db162f6",
                 "resourcePath": "tilesets\/ts_bg_gingerbreadTown\/ts_bg_gingerbreadTown.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "c47d024f-c158-48f0-9cb3-457678f9d458",
+            "Value": {
+                "id": "0e7a058e-905e-4e2d-a6dc-d4c0e3d36d52",
+                "resourcePath": "sprites\\spr_bg_snow\\spr_bg_snow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

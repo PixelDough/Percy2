@@ -2,3 +2,4 @@
 //discord_free_dll();
 
 ds_grid_destroy(global.levels);
+sprite_delete(global.paused_sprite);

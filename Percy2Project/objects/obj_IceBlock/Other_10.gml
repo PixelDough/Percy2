@@ -3,7 +3,7 @@
 event_inherited();
 
 image_index++;
-if image_index == image_number or (obj_player.POWER == POWERS.STRONG) {
+if (image_index == image_number and object_index != obj_IceBlockBig) or obj_player.POWER == POWERS.STRONG {
 	//if place_meeting(x, y, obj_player) {
 		//if obj_player.POWER != POWERS.STRONG 
 			//obj_player.velocity[1] = 0

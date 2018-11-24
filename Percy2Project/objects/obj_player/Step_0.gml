@@ -1,5 +1,7 @@
 event_inherited();
 
+if global.paused exit;
+
 if !instance_exists(obj_player_start) and !instance_exists(obj_door) {
 	instance_destroy();
 }
@@ -24,7 +26,7 @@ if !input.enabled {
 }
 
 var _x_input = input.r - input.l;
-var _crouch = input.d or (ACTION == PERCY.CROUCH and instance_place_plus(x, bbox_top, obj_solid));
+var _crouch = input.d or (ACTION == PERCY.CROUCH and instance_place_plus(x, bbox_top-4, obj_solid));
 
 water_to_ice(POWER == POWERS.ICE);
 
@@ -128,6 +130,9 @@ if _do_physics {
 }
 
 percy_present();
+
+if WAND_TIME > 0 
+	WAND_TIME--;
 
 if bbox_top > room_height {
 	event_user(DIE);

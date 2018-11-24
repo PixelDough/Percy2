@@ -1,5 +1,7 @@
 enabled = true;
 
+input_reset();
+
 ACTION = 0;
 event_user(ACTION);
 
@@ -11,4 +13,3 @@ keyboard_set_map(vk_right,ord("D"),);
 keyboard_set_map(ord("Z"),ord("N"));
 keyboard_set_map(ord("X"),ord("M"));
 
-input_reset();

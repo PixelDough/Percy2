@@ -1,3 +1,5 @@
+if global.paused exit;
+
 make_platform(obj_platform)
 grounded = instance_place_plus(x, y+1, obj_solid);
 

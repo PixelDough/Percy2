@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_gingerbread_town",
+    "name": "level7_source",
     "id": "3f7964f4-cf33-42ca-8c2d-ff6efd0956d7",
     "creationCodeFile": "",
     "inheritCode": false,

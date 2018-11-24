@@ -7,4 +7,4 @@ event_inherited();
 sprite = spr_platformBlock_9slice
 type = irandom(sprite_get_number(sprite));
 
-depth += ((10*-bbox_top) + bbox_left) / 100
+depth -= (bbox_top) / 10
