@@ -1,6 +1,6 @@
 var _target = instance_place_plus(x, y+4, obj_block_parent);
 if !present {
-	if _target and input.d and input.action_two_pressed {
+	if _target and input.action_two_pressed {
 		//if _target.object_index == obj_solid || (object_is_ancestor(_target.object_index, obj_platform)) exit;
 		present = instance_create_layer(_target.x, _target.y, "Instances", obj_present);
 		present.sprite_index = _target.sprite_index

@@ -59,8 +59,8 @@ if !_y_hit_solid and !_do_jump and !grounded {
 		_grav*=2;
 	}
 	velocity[1] += _grav; 
-	if ( _release_jump ) {
-		if velocity[1] < 0 {
+	if ( _release_jump){// and velocity[1]*0.35 < -0.5) {
+		if velocity[1]*0.35 < 0 {
 			velocity[1] *= 0.35;
 		}
 	}

@@ -1,5 +1,5 @@
 
-SEL = 0;
+SEL = global.level_num;
 
 LEVELS = array_create(24, [0])
 

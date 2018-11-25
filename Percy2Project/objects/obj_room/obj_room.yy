@@ -22,7 +22,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "83f79db4-f610-49f8-8177-9500a01c4b5e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "camera_look_down",
+            "varType": 3
+        }
+    ],
     "solid": false,
     "spriteId": "86d30694-de39-4336-bc56-d194344a8ffa",
     "visible": false

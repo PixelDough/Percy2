@@ -13,3 +13,8 @@ for (var _x=0; _x<room_width; _x+=16) {
 		}
 	}
 }
+
+for (var _y=-16; _y<room_height; _y+=16) {
+	instance_create_layer(-16, _y, "Instances", obj_solid);
+	instance_create_layer(room_width, _y, "Instances", obj_solid);
+}

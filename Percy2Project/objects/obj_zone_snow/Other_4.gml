@@ -17,5 +17,5 @@ part_type_speed(pt_snow, 0.5, 2, 0, 0);
 part_type_shape(pt_snow, ps_shape_ellipse);
 part_type_sprite(pt_snow, spr_part_snow, true, true, false);
 
-part_emitter_burst(ps_snow, pe_snow_start, pt_snow, 1000);
-part_emitter_stream(ps_snow, pe_snow, pt_snow, 5);
+part_emitter_burst(ps_snow, pe_snow_start, pt_snow, ceil((bbox_right-bbox_left)/7));
+part_emitter_stream(ps_snow, pe_snow, pt_snow, ceil((bbox_right-bbox_left)/700));
