@@ -32,15 +32,15 @@ for (var _i=0; _i<image_number; _i++) {
 		
 		
 		for (var _a=0; _a<array_length_1d(AWARDS); _a++) {
-	
+			
 			// Move awards
 			AWARDS[_a] = lerp(AWARDS[_a], (xstart-(room_width/6))*(global.levels[# global.level_num, _a+1]), 0.2);
-	
+			
 			// Draw buttons
 			gpu_set_fog(true, c_black, 0, 1)
 			draw_sprite(spr_menu_awards, _a, room_width+4-AWARDS[_a], (room_height*((1+_a)/4))+4);
 			gpu_set_fog(false, c_black, 0, 1)
-
+			
 			draw_sprite(spr_menu_awards, _a, room_width-AWARDS[_a], room_height*((1+_a)/4));
 			
 		}
@@ -55,9 +55,15 @@ for (var _i=0; _i<image_number; _i++) {
 	} else {
 		if SEL == _i {
 			if input.action_one_pressed {
-				global.level_rooms = [];
-				global.level_rooms = level_load(global.levels[# global.level_num, 0]);
-				room_goto_circle(global.level_rooms[global.level_room], false, mus_FrostyFrolic);
+				var _levels = global.levels[# global.level_num, 0];
+				if _levels != noone and is_array(_levels) {
+					if room_exists(_levels[global.level_room]) {
+				
+						global.level_rooms = [];
+						global.level_rooms = level_load(global.levels[# global.level_num, 0]);
+						room_goto_circle(global.level_rooms[global.level_room], false, mus_FrostyFrolic);
+					}
+				}
 			}
 		}
 	}
