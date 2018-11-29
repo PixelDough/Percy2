@@ -133,6 +133,8 @@ percy_present();
 
 if WAND_TIME > 0 
 	WAND_TIME--;
+if HIT_TIME > 0
+	HIT_TIME--;
 
 if bbox_top > room_height {
 	event_user(DIE);

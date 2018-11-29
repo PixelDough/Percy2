@@ -2,7 +2,7 @@
 if !ENABLED exit;
 
 if other.WAND_TIME <= 0 {
-	if other.velocity[1] > 0 or other.y+other.velocity[1] <= bbox_top+4 { 
+	if (other.velocity[1] > 0 and other.bbox_bottom < bbox_bottom) { 
 	
 		with other {
 			y = other.bbox_top;
@@ -18,9 +18,18 @@ if other.WAND_TIME <= 0 {
 		audio_play_sound(snd_pop, 100, false);
 	} else {
 		with obj_player {
-			event_user(DIE);
+			if HIT_TIME <= 0 {
+				if POWER == POWERS.NONE {
+					event_user(DIE);
+				} else {
+					HIT_TIME = 120;
+					POWER = POWERS.NONE;
+				}
+			}
 		}
 	}
-} else {
+}
+
+if other.WAND_TIME > 0 {
 	make_dead(self);
 }

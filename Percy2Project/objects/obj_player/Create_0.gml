@@ -23,6 +23,8 @@ POWER = POWERS.NONE;
 
 WAND_TIME = 0;
 
+HIT_TIME = 0;
+
 HEALTH = 0;
 
 spd = 0.05;

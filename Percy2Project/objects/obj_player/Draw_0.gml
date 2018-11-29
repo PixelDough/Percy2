@@ -1,11 +1,13 @@
 
-var _pal = POWER;
-if WAND_TIME > 0 _pal=floor(4+((global.time/5)%2))
-pal_swap_set(spr_pal_percy, _pal, false);
-draw_shadow(1)
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 100);
-//if POWER == 4 draw_sprite_ext(spr_hat, 0, x, bbox_top, image_xscale, image_yscale, 0, c_white, 100);
-pal_swap_reset();
+if HIT_TIME%2 == 0 {
+	var _pal = POWER;
+	if WAND_TIME > 0 _pal=floor(4+((global.time/5)%2))
+	pal_swap_set(spr_pal_percy, _pal, false);
+	draw_shadow(1)
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 100);
+	//if POWER == 4 draw_sprite_ext(spr_hat, 0, x, bbox_top, image_xscale, image_yscale, 0, c_white, 100);
+	pal_swap_reset();
+}
 
 //if holding_present draw_sprite(spr_present, 0, x+(image_xscale*8), bbox_bottom-4)
 
