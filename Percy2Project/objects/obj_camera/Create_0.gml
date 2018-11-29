@@ -10,3 +10,5 @@ target_y = y;
 x_buff = 16;
 y_buff = 8;
 
+//application_surface_draw_enable(false)
+gpu_set_tex_filter(false)

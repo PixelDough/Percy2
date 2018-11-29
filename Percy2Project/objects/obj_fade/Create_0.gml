@@ -1,4 +1,4 @@
-
+depth = -99999
 target = room;
 with obj_camera {
 	circ_radius = camera_get_view_width(view_camera[0]);
