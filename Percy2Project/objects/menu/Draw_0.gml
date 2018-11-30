@@ -45,7 +45,7 @@ if SEL == MENU_MAIN.NEW {
 	
 	if input.action_one_pressed {
 		new_game(MODE);
-		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
+		room_goto_circle(opening, false, mus_FrostyFrolic);
 	}
 	
 }

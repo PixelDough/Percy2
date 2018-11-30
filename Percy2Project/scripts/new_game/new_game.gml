@@ -32,11 +32,11 @@ if _gameMode != MENU_MODES.FREE {
 }
 
 
-level_create(0, [level1, level1_sub1], false, false, false);
-level_create(1, [level2, level2_sub1], false, false, false);
-level_create(2, [level3, level3_sub1, level3_sub2], false, false, false);
-level_create(3, [level4], false, false, false);
-level_create(6, [level7], false, false, false);
+level_create(0, [level1, level1_sub1],					false,	false,	false, mus_FrostyFrolic);
+level_create(1, [level2, level2_sub1],					false,	false,	false, mus_FrostyFrolic);
+level_create(2, [level3, level3_sub1,	level3_sub2],	false,	false,	false, mus_FrostyFrolic);
+level_create(3, [level4],								false,	false,	false, mus_FrostyFrolic);
+level_create(6, [level7],								false,	false,	false, mus_FrostyFrolic);
 
 ini_write_string("Levels", "ds_grid", ds_grid_write(global.levels));
 
