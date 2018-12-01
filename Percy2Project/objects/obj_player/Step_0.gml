@@ -139,3 +139,5 @@ if HIT_TIME > 0
 if bbox_top > room_height {
 	event_user(DIE);
 }
+
+if input.enabled level_time++;

@@ -31,3 +31,5 @@ spd = 0.05;
 spd_mul = 1;
 
 image_speed = 0;
+
+level_time = 0;

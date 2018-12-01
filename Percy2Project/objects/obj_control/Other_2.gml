@@ -29,7 +29,7 @@ global.level_rooms = [];
 global.saveGame_mode = 0;
 global.saveGame_date = date_current_datetime();
 
-global.levels = ds_grid_create(24, 4);
+global.levels = ds_grid_create(24, 6);
 
 load_game();
 
