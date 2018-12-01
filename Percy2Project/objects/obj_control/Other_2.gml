@@ -3,8 +3,8 @@ randomize();
 //audio_play_sound(mus_FrostyFrolic, 100, true)
 
 global.new_version = false;
-global.version = 1.0;
-http_get_file("https://raw.githubusercontent.com/PixelDough/Percy2/master/PercyVersion.ini?token=AYGS6LILpnWSlJPbROTp1WKaC5UMiDTEks5cC06OwA%3D%3D", working_directory + "/Versions.ini");
+global.version = "1.0";
+global.newestVersion = http_get_file("https://raw.githubusercontent.com/PixelDough/Percy2/master/PercyVersion.ini?token=AYGS6LILpnWSlJPbROTp1WKaC5UMiDTEks5cC06OwA%3D%3D", working_directory + "\Versions.ini");
 
 pal_swap_init_system(shd_pal_swapper);
 
