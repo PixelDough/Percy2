@@ -4,7 +4,7 @@ randomize();
 
 global.new_version = false;
 global.version = 1.0;
-http_get_file("https://drive.google.com/uc?export=download&id=1Rd1GpZ7PClqSFjBJtcHHDXxUb7jj7iYy", working_directory + "/Versions.txt");
+http_get_file("https://raw.githubusercontent.com/PixelDough/Percy2/master/PercyVersion.ini?token=AYGS6LILpnWSlJPbROTp1WKaC5UMiDTEks5cC06OwA%3D%3D", working_directory + "/Versions.txt");
 
 pal_swap_init_system(shd_pal_swapper);
 
