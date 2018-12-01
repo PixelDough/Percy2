@@ -2,6 +2,10 @@
 randomize();
 //audio_play_sound(mus_FrostyFrolic, 100, true)
 
+global.new_version = false;
+global.version = 1.0;
+http_get_file("https://drive.google.com/uc?export=download&id=1Rd1GpZ7PClqSFjBJtcHHDXxUb7jj7iYy", working_directory + "/Versions.txt");
+
 pal_swap_init_system(shd_pal_swapper);
 
 //discord_init_dll();

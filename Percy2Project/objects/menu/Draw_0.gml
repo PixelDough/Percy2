@@ -44,29 +44,44 @@ if SEL == MENU_MAIN.NEW {
 	if MODE > array_length_1d(MODES)-1 MODE = 0;
 	
 	if input.action_one_pressed {
+		if file_exists("SaveGame.ini") and warning_display == false {
+			warning_display = true;
+			exit;
+		} else {
+			warning_display = false;
+		}
 		new_game(MODE);
 		room_goto_circle(opening, false, mus_FrostyFrolic);
 	}
 	
 }
 
-if SEL == MENU_MAIN.PLAY {
+if file_exists("SaveGame.ini") {
+	if SEL == MENU_MAIN.PLAY {
 	
-	var _date_string = string("STARTED ON: " + string(date_get_month(global.saveGame_date)) + "/" + string(date_get_day(global.saveGame_date)));
+		var _date_string = string("STARTED ON: " + string(date_get_month(global.saveGame_date)) + "/" + string(date_get_day(global.saveGame_date)));
 	
-	if date_current_datetime() - global.saveGame_date > 365
-		_date_string = "STARTED OVER A YEAR AGO";
+		if date_current_datetime() - global.saveGame_date > 365
+			_date_string = "STARTED OVER A YEAR AGO";
 	
-	draw_text(room_width/2, 64, _date_string);
+		draw_text(room_width/2, 64, _date_string);
 	
-	if input.action_one_pressed {
-		load_game();
-		room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
+		if input.action_one_pressed {
+			load_game();
+			room_goto_circle(rm_levelSelect, false, mus_FrostyFrolicTitle);
+		}
 	}
 }
 
+if SEL == MENU_MAIN.EXIT {
+	if input.action_one_pressed
+		game_end();
+}
+
 var _SEL_last = SEL;
-SEL = clamp(SEL + (input.d_p - input.u_p), 0, array_length_1d(BUTTONS)-1);
+if !warning_display {
+	SEL = clamp(SEL + (input.d_p - input.u_p), 0, array_length_1d(BUTTONS)-1);
+}
 if SEL != _SEL_last {
 	var _snd = play_sound(snd_select1);
 	audio_sound_pitch(_snd, 1+(SEL/10))

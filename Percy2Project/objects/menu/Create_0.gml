@@ -29,3 +29,6 @@ MODES[MENU_MODES.LOCAL] =	["LOCAL",		"BASED ON TODAY - " + string(current_month)
 MODES[MENU_MODES.FREE] =	["FREE PLAY",	"PLAY ANY COMPLETED LEVEL\nWILL NOT ERASE SAVED GAME"];
 
 load_game();
+
+warning_display = false;
+warning_time = 300;
