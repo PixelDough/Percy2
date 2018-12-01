@@ -17,8 +17,8 @@ if ds_map_find_value(async_load, "id") == global.newestVersion
     {
         var path = ds_map_find_value(async_load, "result");
         ini_open(working_directory + "\Versions.ini");
-			if global.version != ini_read_string("VERSION", "NEWEST", "ERROR") {
-				show_message("A new version of this game is available!\n\n" + string(ini_read_string("VERSION", "NEWEST", "ERROR")))
+			if global.version < ini_read_real("VERSION", "NEWEST", 1.0) {
+				show_message("A new version of this game is available!\n\nVersion: " + string(global.version) + "\nNewest Version: " + string(ini_read_real("VERSION", "NEWEST", 1.0)))
 				game_end();
 			}
 		ini_close();
