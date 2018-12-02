@@ -29,6 +29,8 @@ if enabled {
 	pause_pressed = keyboard_check_pressed(vk_enter);
 	select_pressed = keyboard_check_pressed(vk_rshift);
 	
+	escape_pressed = keyboard_check_pressed(vk_escape);
+	
 	var maxpads = gamepad_get_device_count();
 	for (var i = 0; i < maxpads; i++){
 		if (gamepad_is_connected(i)){
@@ -58,6 +60,9 @@ if enabled {
 	
 			pause_pressed = gamepad_button_check_pressed(i, gp_start);
 			select_pressed = gamepad_button_check_pressed(i, gp_select);
+			
+			escape_pressed = (!gamepad_button_check(i, gp_start) and escape_pressed);
+			
 		}
 	}
 	

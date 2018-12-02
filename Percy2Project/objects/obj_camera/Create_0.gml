@@ -16,4 +16,4 @@ gpu_set_tex_filter(false)
 global.gui = surface_create(400, 240);
 global.surfaceEnd = surface_create(400, 240);
 
-global.CRT = true
+global.CRT = false;
