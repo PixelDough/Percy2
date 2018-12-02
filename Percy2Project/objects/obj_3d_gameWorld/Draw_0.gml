@@ -47,6 +47,7 @@ if SPINNING or !SPINNING {
 	image_angle = reach(image_angle, 90+(360*floor((image_angle+90)/360)), 2);
 }
 
+
 //vertex_submit(square, pr_trianglelist, sprite_get_texture(sprite_index, image_index));
 
 //matrix_set(matrix_world, matrix_build_identity());

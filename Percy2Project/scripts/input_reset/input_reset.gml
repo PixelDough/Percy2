@@ -24,4 +24,5 @@ with input {
 	action_one_released = false;
 
 	pause_pressed = false;
+	select_pressed = false;
 }

@@ -28,7 +28,7 @@ void main()
 	}
 	
 	//gl_FragColor += 0.1;
-	gl_FragColor *= 2.0;
+	//gl_FragColor *= 2.0;
 	
 	
 	if (mod(v_vPosition.y, 3.0) < 1.0)

@@ -12,7 +12,10 @@ if other.WAND_TIME <= 0 {
 				instance_destroy(other);
 			} else {
 				make_dead(other);
-				velocity[1] = -sqrt(2 * grav * jh)
+				if input.action_one
+					velocity[1] = -sqrt(2 * grav * jh)
+				else
+					velocity[1] = -sqrt(2 * grav * jh/4)
 			}
 		}
 		audio_play_sound(snd_pop, 100, false);
@@ -24,6 +27,7 @@ if other.WAND_TIME <= 0 {
 				} else {
 					HIT_TIME = 120;
 					POWER = POWERS.NONE;
+					play_sound(snd_hurt);
 				}
 			}
 		}

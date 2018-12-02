@@ -6,13 +6,13 @@ MODE = 0;
 enum MENU_MAIN {
 	NEW,
 	PLAY,
-	EXIT
+	HELP
 }
 
 BUTTONS = []				//Sprite		x
 BUTTONS[MENU_MAIN.NEW] =	[spr_menu_new,	0,	"Start a new adventure!"]
 BUTTONS[MENU_MAIN.PLAY] =	[spr_menu_play,	0,	"Resume where you left off!"];
-BUTTONS[MENU_MAIN.EXIT] =	[spr_menu_exit,	0,	"Leaving so soon?"];
+BUTTONS[MENU_MAIN.HELP] =	[spr_menu_help,	0,	"Instructions"];
 
 
 

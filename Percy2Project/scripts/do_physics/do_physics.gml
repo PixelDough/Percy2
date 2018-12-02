@@ -53,6 +53,9 @@ ds_list_destroy(_y_hit)
 //if _y_hit {
 //	if _y_hit.solid_ _y_hit_solid = true;
 //}
+if velocity[1] + _grav > 0 
+	if object_index == obj_player
+		audio_stop_sound(snd_jump)
 if !_y_hit_solid and !_do_jump and !grounded {
     //set gravity - we are in the air!
 	if velocity[1] > 0 {
@@ -68,10 +71,14 @@ if !_y_hit_solid and !_do_jump and !grounded {
     velocity[1] = 0; //no need for gravity on ground
 	if( _do_jump ){
 	    velocity[1] = -sqrt(2 * _grav * _jump_speed);
-		if self == obj_player
+		if object_index == obj_player
 			play_sound(snd_jump);
 	}
 }
+
+//if velocity[1] == -sqrt(2 * _grav * _jump_speed) and !_do_jump {
+//	velocity[1] *= 0.35
+//}
 //we are on ground so we can check if we need to jump
 
 

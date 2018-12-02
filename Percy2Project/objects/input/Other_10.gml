@@ -27,19 +27,20 @@ if enabled {
 	action_one_released = keyboard_check_released(ord("M"))
 	
 	pause_pressed = keyboard_check_pressed(vk_enter);
+	select_pressed = keyboard_check_pressed(vk_rshift);
 	
 	var maxpads = gamepad_get_device_count();
 	for (var i = 0; i < maxpads; i++){
 		if (gamepad_is_connected(i)){
-			r_p = gamepad_button_check_pressed(i, gp_padr) || ( !r && max(gamepad_axis_value(i, gp_axislh), 0));
-			l_p = gamepad_button_check_pressed(i, gp_padl) || ( !l && abs(min(gamepad_axis_value(i, gp_axislh), 0)));
-			u_p = gamepad_button_check_pressed(i, gp_padu) || ( !u && abs(min(gamepad_axis_value(i, gp_axislv), 0)));
-			d_p = gamepad_button_check_pressed(i, gp_padd) || ( !d && max(gamepad_axis_value(i, gp_axislv), 0));
+			r_p = gamepad_button_check_pressed(i, gp_padr);
+			l_p = gamepad_button_check_pressed(i, gp_padl);
+			u_p = gamepad_button_check_pressed(i, gp_padu);
+			d_p = gamepad_button_check_pressed(i, gp_padd);
 			
-			r = gamepad_button_check(i, gp_padr) || max(gamepad_axis_value(i, gp_axislh), 0);
-			l = gamepad_button_check(i, gp_padl) || abs(min(gamepad_axis_value(i, gp_axislh), 0));
-			u = gamepad_button_check(i, gp_padu) || abs(min(gamepad_axis_value(i, gp_axislv), 0));
-			d = gamepad_button_check(i, gp_padd) || max(gamepad_axis_value(i, gp_axislv), 0);			
+			r = gamepad_button_check(i, gp_padr);
+			l = gamepad_button_check(i, gp_padl);
+			u = gamepad_button_check(i, gp_padu);
+			d = gamepad_button_check(i, gp_padd);	
 
 			r_released = gamepad_button_check_released(i, gp_padr);
 			l_released = gamepad_button_check_released(i, gp_padl);
@@ -56,6 +57,7 @@ if enabled {
 			action_one_released = gamepad_button_check_released(i, gp_face2) || gamepad_button_check_released(i, gp_face3);
 	
 			pause_pressed = gamepad_button_check_pressed(i, gp_start);
+			select_pressed = gamepad_button_check_pressed(i, gp_select);
 		}
 	}
 	

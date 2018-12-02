@@ -73,9 +73,10 @@ if file_exists("SaveGame.ini") {
 	}
 }
 
-if SEL == MENU_MAIN.EXIT {
-	if input.action_one_pressed
-		game_end();
+if SEL == MENU_MAIN.HELP {
+	
+	draw_text(room_width/2, room_height/2, "MOVE - UDLR\n\nJUMP - A\n\nPICKUP/THROW - B\n\nRUN - HOLD B\n\n\n\nQUIT GAME - ESCAPE\n\n\n\nFULLSCREEN - F\n\nCRT - SELECT");
+	
 }
 
 var _SEL_last = SEL;

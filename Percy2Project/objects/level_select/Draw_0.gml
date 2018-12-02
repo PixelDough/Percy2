@@ -50,9 +50,9 @@ for (var _i=0; _i<image_number; _i++) {
 	
 	draw_sprite(spr_menu_levels, _i, x + _x, y + _y);
 	
-	//if _i+1 > 1+(date_current_datetime() - global.saveGame_date) {
-	//	draw_sprite(spr_menu_levels_presents, _i, x + _x, y + _y);
-	//} else {
+	if _i+1 > 1+(date_current_datetime() - global.saveGame_date) {
+		draw_sprite(spr_menu_levels_presents, _i, x + _x, y + _y);
+	} else {
 		if SEL == _i {
 			if input.action_one_pressed {
 				var _levels = global.levels[# global.level_num, 0];
@@ -66,7 +66,7 @@ for (var _i=0; _i<image_number; _i++) {
 				}
 			}
 		}
-	//}
+	}
 	
 	LEVELS[_i] = _level;
 	

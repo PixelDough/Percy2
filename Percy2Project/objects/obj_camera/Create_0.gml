@@ -12,3 +12,8 @@ y_buff = 8;
 
 //application_surface_draw_enable(false)
 gpu_set_tex_filter(false)
+
+global.gui = surface_create(400, 240);
+global.surfaceEnd = surface_create(400, 240);
+
+global.CRT = true
