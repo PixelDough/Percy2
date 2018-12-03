@@ -15,7 +15,9 @@
         "735335c4-5f15-47b0-b79a-480b78974133",
         "1c6b1656-79ef-4ce1-92b6-a9045c8a06e4",
         "61b282bc-cc65-4b74-a6aa-2f289cb5450a",
-        "9242a269-2a7b-4a20-82c0-d7ecf6f5898d"
+        "9242a269-2a7b-4a20-82c0-d7ecf6f5898d",
+        "28ffd29a-cf5a-40a0-864e-46f0d7684b0b",
+        "0d40a751-bbd5-4642-b631-6ad9542a5738"
     ],
     "filterType": "GMObject",
     "folderName": "Title",

@@ -21,7 +21,7 @@ if input.d_p {
 
 current_room = instance_place(x, y, obj_room);
 
-if !input.enabled {
+if !input.enabled and object_index == obj_player {
 	exit;
 }
 

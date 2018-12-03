@@ -17,14 +17,14 @@ if enabled {
 	u_released = keyboard_check_released(ord("W"))
 	d_released = keyboard_check_released(ord("S"))
 
-	action_two = keyboard_check(ord("N"))
-	action_one = keyboard_check(ord("M"))
+	action_two = keyboard_check(ord("M"))
+	action_one = keyboard_check(ord("N"))
 
-	action_two_pressed = keyboard_check_pressed(ord("N"))
-	action_one_pressed = keyboard_check_pressed(ord("M"))
+	action_two_pressed = keyboard_check_pressed(ord("M"))
+	action_one_pressed = keyboard_check_pressed(ord("N"))
 
-	action_two_released = keyboard_check_released(ord("N"))
-	action_one_released = keyboard_check_released(ord("M"))
+	action_two_released = keyboard_check_released(ord("M"))
+	action_one_released = keyboard_check_released(ord("N"))
 	
 	pause_pressed = keyboard_check_pressed(vk_enter);
 	select_pressed = keyboard_check_pressed(vk_rshift);

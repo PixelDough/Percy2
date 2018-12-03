@@ -4,6 +4,8 @@ height = camera_get_view_height(view_camera[0]);
 
 target_object = self;
 
+circ_radius = width;
+
 target_x = x;
 target_y = y;
 

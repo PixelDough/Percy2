@@ -1,4 +1,4 @@
-if room == setup room_goto_circle(rm_title_3d, true, mus_FrostyFrolicTitle);
+if room == setup room = rm_pixeldough//room_goto_circle(rm_title_3d, true, mus_FrostyFrolicTitle);
 with obj_solid {
 	if object_index == obj_solid {
 		instance_destroy();
