@@ -41,3 +41,14 @@ draw_surface(_surf, 0, 0)
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_text(bbox_right, bbox_bottom+4, "©2018 PIXELDOUGH");
+
+if TIME_ALIVE > 300 {
+	draw_set_halign(fa_center);
+	if global.time % 60 < 30 {
+		var _key = "X";
+		if input.controller_detected
+			_key = "A";
+		
+		draw_text(room_width/2, room_height/1.5, "PRESS " + _key + " TO START");
+	}
+}

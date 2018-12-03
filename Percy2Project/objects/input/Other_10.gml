@@ -31,38 +31,40 @@ if enabled {
 	
 	escape_pressed = keyboard_check_pressed(vk_escape);
 	
+	controller_detected = false;
 	var maxpads = gamepad_get_device_count();
 	for (var i = 0; i < maxpads; i++){
 		if (gamepad_is_connected(i)){
-			r_p = gamepad_button_check_pressed(i, gp_padr);
-			l_p = gamepad_button_check_pressed(i, gp_padl);
-			u_p = gamepad_button_check_pressed(i, gp_padu);
-			d_p = gamepad_button_check_pressed(i, gp_padd);
+			r_p = r_p or gamepad_button_check_pressed(i, gp_padr);
+			l_p = l_p or gamepad_button_check_pressed(i, gp_padl);
+			u_p = u_p or gamepad_button_check_pressed(i, gp_padu);
+			d_p = d_p or gamepad_button_check_pressed(i, gp_padd);
 			
-			r = gamepad_button_check(i, gp_padr);
-			l = gamepad_button_check(i, gp_padl);
-			u = gamepad_button_check(i, gp_padu);
-			d = gamepad_button_check(i, gp_padd);	
+			r = r or gamepad_button_check(i, gp_padr);
+			l = l or gamepad_button_check(i, gp_padl);
+			u = u or gamepad_button_check(i, gp_padu);
+			d = d or gamepad_button_check(i, gp_padd);	
 
-			r_released = gamepad_button_check_released(i, gp_padr);
-			l_released = gamepad_button_check_released(i, gp_padl);
-			u_released = gamepad_button_check_released(i, gp_padu);
-			d_released = gamepad_button_check_released(i, gp_padd);
+			r_released = r_released or gamepad_button_check_released(i, gp_padr);
+			l_released = l_released or gamepad_button_check_released(i, gp_padl);
+			u_released = u_released or gamepad_button_check_released(i, gp_padu);
+			d_released = d_released or gamepad_button_check_released(i, gp_padd);
 
-			action_two = gamepad_button_check(i, gp_face1);
-			action_one = gamepad_button_check(i, gp_face2) || gamepad_button_check(i, gp_face3);
+			action_two = action_two or gamepad_button_check(i, gp_face1);
+			action_one = action_one or gamepad_button_check(i, gp_face2) || gamepad_button_check(i, gp_face3);
 
-			action_two_pressed = gamepad_button_check_pressed(i, gp_face1);
-			action_one_pressed = gamepad_button_check_pressed(i, gp_face2) || gamepad_button_check_pressed(i, gp_face3);
+			action_two_pressed = action_two_pressed or gamepad_button_check_pressed(i, gp_face1);
+			action_one_pressed = action_one_pressed or gamepad_button_check_pressed(i, gp_face2) || gamepad_button_check_pressed(i, gp_face3);
 
-			action_two_released = gamepad_button_check_released(i, gp_face1);
-			action_one_released = gamepad_button_check_released(i, gp_face2) || gamepad_button_check_released(i, gp_face3);
+			action_two_released = action_two_released or gamepad_button_check_released(i, gp_face1);
+			action_one_released = action_one_released or gamepad_button_check_released(i, gp_face2) || gamepad_button_check_released(i, gp_face3);
 	
-			pause_pressed = gamepad_button_check_pressed(i, gp_start);
-			select_pressed = gamepad_button_check_pressed(i, gp_select);
+			pause_pressed = pause_pressed or gamepad_button_check_pressed(i, gp_start);
+			select_pressed = select_pressed or gamepad_button_check_pressed(i, gp_select);
 			
 			escape_pressed = (!gamepad_button_check(i, gp_start) and escape_pressed);
 			
+			controller_detected = true;
 		}
 	}
 	

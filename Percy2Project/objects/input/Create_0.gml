@@ -13,3 +13,4 @@ keyboard_set_map(vk_right,ord("D"),);
 keyboard_set_map(ord("Z"),ord("N"));
 keyboard_set_map(ord("X"),ord("M"));
 
+controller_detected = false;

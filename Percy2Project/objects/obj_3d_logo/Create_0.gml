@@ -8,3 +8,5 @@ if file_exists("packet.txt") image_index = 1;
 
 shine_pos=0;
 alarm[0] = irandom_range(30, 270);
+
+TIME_ALIVE = 0;

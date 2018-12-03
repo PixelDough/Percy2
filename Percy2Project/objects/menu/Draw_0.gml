@@ -75,7 +75,9 @@ if file_exists("SaveGame.ini") {
 
 if SEL == MENU_MAIN.HELP {
 	
-	draw_text(room_width/2, room_height/2, "MOVE - UDLR\n\nJUMP - A\n\nPICKUP/THROW - B\n\nRUN - HOLD B\n\n\n\nQUIT GAME - ESCAPE\n\n\n\nFULLSCREEN - F\n\nCRT - SELECT");
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(room_width/2, room_height/2, "MOVE - UDLR\n\nJUMP - A\n\nPICKUP/THROW - B\n\nRUN - HOLD B\n\nPLATFORM FALL - DOWN x2\n\n\n\nQUIT GAME - ESCAPE\n\n\n\nFULLSCREEN - F\n\nC.R.T. FILTER - SELECT");
 	
 }
 

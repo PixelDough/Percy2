@@ -1783,6 +1783,14 @@
             }
         },
         {
+            "Key": "9ae0f179-fd9b-47bc-ae1e-a0f07214a4fe",
+            "Value": {
+                "id": "ec4164e1-599c-40fe-974f-70c5c8376b65",
+                "resourcePath": "sprites\\spr_controller\\spr_controller.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9b4e3a40-1aab-419e-ab5b-19f8c05a8a8f",
             "Value": {
                 "id": "171c0d13-2a55-49f7-8595-53bb1c8123fd",

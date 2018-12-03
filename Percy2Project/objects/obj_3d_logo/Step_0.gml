@@ -11,8 +11,11 @@ if obj_3d_gameWorld.SPINNING {
 		velocity[1] += 0.15;
 
 	y+=velocity[1];
+	if TIME_ALIVE >= 0
+		TIME_ALIVE++;
 } else {
 	y = start_y;
+	TIME_ALIVE = -300;
 	//velocity[1] += 0.15;
 
 	//y+=velocity[1];
