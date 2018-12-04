@@ -20,5 +20,5 @@ enum MENU_PAUSE {
 
 BUTTONS_PAUSE = []			
 BUTTONS_PAUSE[MENU_PAUSE.PLAY] = [spr_menu_play,	0]
-BUTTONS_PAUSE[MENU_PAUSE.EXIT] = [spr_menu_help,	0]
+BUTTONS_PAUSE[MENU_PAUSE.EXIT] = [spr_menu_exit,	0]
 

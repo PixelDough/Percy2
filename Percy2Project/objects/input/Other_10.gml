@@ -59,7 +59,7 @@ if enabled {
 			action_two_released = action_two_released or gamepad_button_check_released(i, gp_face1);
 			action_one_released = action_one_released or gamepad_button_check_released(i, gp_face2) || gamepad_button_check_released(i, gp_face3);
 	
-			pause_pressed = pause_pressed or gamepad_button_check_pressed(i, gp_start);
+			pause_pressed = (pause_pressed or gamepad_button_check_pressed(i, gp_start)) and !action_two;
 			select_pressed = select_pressed or gamepad_button_check_pressed(i, gp_select);
 			
 			escape_pressed = (!gamepad_button_check(i, gp_start) and escape_pressed);
