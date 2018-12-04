@@ -1,4 +1,10 @@
 // Inherit the parent event
+
+if input.action_one_pressed {
+	room_goto_circle(rm_title_3d, false, mus_FrostyFrolicTitle);
+	exit;
+}
+
 input_reset();
 if x < room_width/2 - 64 {
 	input.r = true;

@@ -10,7 +10,10 @@ if room == rm_title_3d {
 	//if obj_3d_gameWorld.SPINNING {
 		draw_set_halign(fa_right);
 		draw_set_valign(fa_bottom);
-		draw_text(room_width-2, room_height-2, "CONTROLLER RECOMMENDED");
+		var _string = "CONTROLLER RECOMMENDED"
+		if input.controller_detected
+			_string = "CONTROLLER DETECTED"
+		draw_text(room_width-2, room_height-2, _string);
 	//}
 }
 surface_reset_target();
