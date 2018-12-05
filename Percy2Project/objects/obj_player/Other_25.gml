@@ -1,5 +1,8 @@
 /// @description DIE EVENT
 
+if !input.enabled 
+	exit;
+
 with obj_control {
 	global.level_rooms = [];
 	
