@@ -41,6 +41,7 @@ if room == rm_title_3d {
 
 }
 
+
 camera_set_view_pos(view_camera[0], x - width/2, y - height/2);
 
 if instance_exists(obj_player) {

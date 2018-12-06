@@ -14,7 +14,7 @@ ds_list_add(_data,undefined,undefined,undefined);
 layer_script_begin(_layer_index,_pal_swap_layer_start);	
 layer_script_end(_layer_index,_pal_swap_layer_end);
 
-ds_map_add_list(Pal_Layer_Map,_layer_index,_data);
-ds_priority_add(Pal_Layer_Priority,_layer_index,layer_get_depth(_layer_index));
+ds_map_add_list(pal_Layer_Map,_layer_index,_data);
+ds_priority_add(pal_Layer_Priority,_layer_index,layer_get_depth(_layer_index));
 
 ds_list_destroy(_data);

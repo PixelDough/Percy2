@@ -8,7 +8,7 @@
 //leave it, but if you are experiencing performances issues, there are some
 //ways to make this work a bit more efficiently.
 #define PixelSize 1./TexturePageSize
-#define PalHeight ColorCount * PixelSize
+#define palHeight ColorCount * PixelSize
 #define Transparent vec4(.0,.0,.0,.0)
 #define Tolerance 0.004
 
@@ -27,7 +27,7 @@ vec4 findAltColor(vec4 inCol, vec2 corner)
     float dist;
     vec2 testPos;
     vec4 leftCol;
-    for(float i=0.; i < PalHeight; i+=PixelSize)
+    for(float i=0.; i < palHeight; i+=PixelSize)
     {
         testPos = vec2(corner.x,corner.y+i);
         leftCol = texture2D( u_palTexture, testPos);

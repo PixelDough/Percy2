@@ -1,6 +1,8 @@
 //circ_radius++;
 
-var _light_float = sin(global.time/5);
+var _light_float = 0;
+if instance_exists(obj_cave)
+	_light_float = sin(global.time/5);
 
 if instance_exists(target_object) {
 	if circ_radius < width {

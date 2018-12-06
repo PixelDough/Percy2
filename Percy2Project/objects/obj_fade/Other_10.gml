@@ -33,7 +33,7 @@ with obj_camera {
 	
 		input.enabled = false;
 		
-		if circ_radius < 1 {
+		if floor(circ_radius) < 1 {
 			if !audio_is_playing(other.music) {
 				audio_stop_all();
 			}

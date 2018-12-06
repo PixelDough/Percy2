@@ -14,7 +14,7 @@ var _pal_index = argument1;
 
 if(_pal_index == 0) exit;
 
-Pal_Shader_Is_Set = true;
+pal_Shader_Is_Set = true;
 var _low =argument2+1;
 var _high = argument3-1;
 var _is_surface = argument4;
