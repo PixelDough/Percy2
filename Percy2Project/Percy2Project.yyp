@@ -319,6 +319,22 @@
             }
         },
         {
+            "Key": "19c70dc2-d097-4543-8d4d-bf30c9c71021",
+            "Value": {
+                "id": "83c05584-4a7f-4cf9-9c76-ba5c7daee9e6",
+                "resourcePath": "sounds\\mus_GingerbreadTown\\mus_GingerbreadTown.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "19ffdde9-9e99-4997-9954-d4cf41d8c866",
+            "Value": {
+                "id": "b1041afc-a6d9-4eb8-906f-6aafd6d72581",
+                "resourcePath": "rooms\\level9\\level9.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1a7c1e96-9826-469b-93b5-26bb5b65f851",
             "Value": {
                 "id": "b8db5ba5-703e-48a3-af7e-364dd013e66f",
