@@ -6,7 +6,7 @@ if input.u_p {
 	other.sprite_index = spr_percy_in;
 	global.player_door = target_door;
 	if room != global.level_rooms[target_room] {
-		room_goto_circle(global.level_rooms[target_room], false, mus_FrostyFrolic);
+		room_goto_circle(global.level_rooms[target_room], false, global.levels[# global.level_num, 4]);
 	} else {
 		//var _other_door = instance_nearest_notme(obj_door);
 		var _player = other;

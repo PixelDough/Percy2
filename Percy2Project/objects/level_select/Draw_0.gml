@@ -47,8 +47,14 @@ for (var _i=0; _i<image_number; _i++) {
 		
 		
 	}
+	var _c = c_white;
+	var _levels = global.levels[# _i, 0];
+	if _levels == noone or !is_array(_levels) {
+		_c = c_dkgray
+	}
+	draw_sprite_ext(spr_menu_levels, _i, x + _x, y + _y, 1, 1, 0, _c, 1);
+		
 	
-	draw_sprite(spr_menu_levels, _i, x + _x, y + _y);
 	
 	if _i+1 > 1+(date_current_datetime() - global.saveGame_date) and !DEBUG {
 		draw_sprite(spr_menu_levels_presents, _i, x + _x, y + _y);

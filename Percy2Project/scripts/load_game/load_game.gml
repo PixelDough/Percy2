@@ -16,3 +16,8 @@ level_create(5, [level6, level6_sub1],					mus_FrostyFrolic,		60 * 20);
 level_create(6, [level7],								mus_GingerbreadTown,	60 * 20);
 level_create(7, [level8],								mus_GingerbreadTown,	60 * 30);
 level_create(8, [level9],								mus_GingerbreadTown,	60 * 30);
+level_create(9, [level10],								mus_GingerbreadTown,	60 * 30);
+level_create(10, [level11],								mus_GingerbreadTown,	60 * 10);
+
+level_create(11, [level12, level12_sub1, level12_sub2, level12_sub3, level12_sub4],
+														mus_GingerbreadTown,	60 * 30);
