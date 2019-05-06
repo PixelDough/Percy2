@@ -1,0 +1,1 @@
+show_debug_message(object_get_name(target_object))

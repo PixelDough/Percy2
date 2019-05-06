@@ -34,9 +34,11 @@ with obj_camera {
 		input.enabled = false;
 		
 		if floor(circ_radius) < 1 {
-			if !audio_is_playing(other.music) {
-				audio_stop_all();
-			}
+			//if other.music != noone {
+			//	if !audio_is_playing(other.music) {
+			//		audio_stop_all();
+			//	}
+			//}
 			play_sound(snd_fadeIn);
 			other.ACTION = CIRC_FADE.IN;
 			circ_radius = 1;

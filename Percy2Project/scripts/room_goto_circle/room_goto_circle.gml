@@ -17,5 +17,6 @@ var _fade = instance_create_layer(0, 0, "META", obj_fade);
 _fade.target = argument0;
 _fade.music = _music;
 
-if _fade_in _fade.ACTION = CIRC_FADE.IN;
+if _fade_in 
+	_fade.ACTION = CIRC_FADE.IN;
 
